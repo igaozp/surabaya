@@ -19,7 +19,7 @@ public class RandomAccessFileExercise {
         Path firstPath = Files.createTempFile("file1Test", ".txt");
         Path secondPath = Files.createTempFile("file2Test", ".txt");
 
-        Files.writeString(firstPath, "testing line 1" + System.lineSeparator() + "liwne 2");
+        Files.writeString(firstPath, "testing line 1" + System.lineSeparator() + "line 2");
         Files.writeString(secondPath, "testing line 1" + System.lineSeparator() + "line 2");
 
         try (RandomAccessFile randomAccessFile1 = new RandomAccessFile(firstPath.toFile(), "r");
