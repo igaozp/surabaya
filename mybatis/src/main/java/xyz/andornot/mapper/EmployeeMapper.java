@@ -6,6 +6,12 @@ import xyz.andornot.domain.Employee;
 
 import java.util.List;
 
+/**
+ * Employee mapper
+ *
+ * @author igaozp
+ * @since 2021/11/10
+ */
 @Mapper
 public interface EmployeeMapper {
 
