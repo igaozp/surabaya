@@ -81,4 +81,4 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 [issues-shield]: https://img.shields.io/github/issues/igaozp/surabaya.svg?style=for-the-badge
 [issues-url]: https://github.com/igaozp/surabaya/issues
 [license-shield]: https://img.shields.io/github/license/igaozp/surabaya.svg?style=for-the-badge
-[license-url]: https://github.com/igaozp/surabaya/blob/master/LICENSE
+[license-url]: https://github.com/igaozp/surabaya/blob/master/LICENSE.txt
