@@ -27,7 +27,7 @@
   <p align="center">
     A repository of code examples around the Java ecosystem!
     <br />
-    一个围绕 Java 相关生态的示例代码库。
+    一个围绕 Java 相关生态的示例代码库！
     <br />
   </p>
 </div>
