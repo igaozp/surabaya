@@ -19,7 +19,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
+  <a href="https://github.com/igaozp/surabaya">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -82,4 +82,3 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 [issues-url]: https://github.com/igaozp/surabaya/issues
 [license-shield]: https://img.shields.io/github/license/igaozp/surabaya.svg?style=for-the-badge
 [license-url]: https://github.com/igaozp/surabaya/blob/master/LICENSE
-[product-screenshot]: images/screenshot.png
