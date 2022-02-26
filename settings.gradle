@@ -1,4 +1,4 @@
-rootProject.name = 'Surabaya'
+rootProject.name = 'surabaya'
 include 'feature'
 include 'mybatis'
 include 'spring'

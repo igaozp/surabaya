@@ -15,8 +15,6 @@ import java.util.List;
 @Mapper
 public interface EmployeeMapper {
 
-    @Select("""
-            SELECT * FROM employee
-            """)
+    @Select("SELECT * FROM employee")
     List<Employee> selectAll();
 }
