@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    hikari:
+      jdbc-url: jdbc:mysql://localhost:3306/tx_test
+      password: password
+      username: root
+  sql:
+    init:
+      schema-locations: schema.sql
+      mode: always
