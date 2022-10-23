@@ -4,3 +4,5 @@ include 'mybatis'
 include 'spring'
 include 'redistream'
 include 'transaction'
+include 'helidon-nima'
+
