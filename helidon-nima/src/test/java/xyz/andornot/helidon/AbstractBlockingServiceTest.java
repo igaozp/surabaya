@@ -29,7 +29,7 @@ abstract class AbstractBlockingServiceTest {
 
     @Test
     void testOne() {
-        try (Http1ClientResponse response = client.get("/one").request()) {
+        try (var response = client.get("/one").request()) {
             assertThat(response.status(), is(Http.Status.OK_200));
             var entity = response.as(String.class);
             assertThat(entity, startsWith("remote_"));
@@ -38,7 +38,7 @@ abstract class AbstractBlockingServiceTest {
 
     @Test
     void testSequence() {
-        try (Http1ClientResponse response = client.get("/sequence").request()) {
+        try (var response = client.get("/sequence").request()) {
             assertThat(response.status(), is(Http.Status.OK_200));
             var entity = response.as(String.class);
             var results = splitAndValidateEntity(entity);
@@ -50,8 +50,7 @@ abstract class AbstractBlockingServiceTest {
 
     @Test
     void testSequenceParam() {
-        try (Http1ClientResponse response = client
-                .get("/sequence").queryParam("count", "1").request()) {
+        try (var response = client.get("/sequence").queryParam("count", "1").request()) {
             assertThat(response.status(), is(Http.Status.OK_200));
             var entity = response.as(String.class);
             var results = splitAndValidateEntity(entity);
@@ -94,13 +93,11 @@ abstract class AbstractBlockingServiceTest {
         var last = -1;
         for (int result : results) {
             assertThat(result, not(-1));
-            if (last == -1) {
-                last = result;
-            } else {
+            if (last != -1) {
                 assertThat("Results should be a sequence of numbers, but the sequence is missing a number: " + Arrays.toString(results),
                         result - last, is(1));
-                last = result;
             }
+            last = result;
         }
     }
 
