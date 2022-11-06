@@ -10,7 +10,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-web:2.7.2'
+    implementation 'org.springframework.boot:spring-boot-starter-web:2.7.5'
     implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.2'
     implementation 'com.h2database:h2:2.1.214'
     testImplementation 'org.springframework.boot:spring-boot-starter-test:2.7.2'

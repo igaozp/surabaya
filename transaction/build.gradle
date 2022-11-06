@@ -10,8 +10,8 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter:2.7.2'
-    implementation 'org.springframework.boot:spring-boot-starter-data-jpa:2.7.2'
+    implementation 'org.springframework.boot:spring-boot-starter:2.7.5'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa:2.7.5'
     implementation 'org.openjdk.jmh:jmh-core:1.35'
     testImplementation 'org.openjdk.jmh:jmh-generator-annprocess:1.35'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.0'
