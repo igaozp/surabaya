@@ -6,3 +6,5 @@ include 'redistream'
 include 'transaction'
 include 'helidon-nima'
 include 'quarkus:virtual-threads'
+include 'design-pattern'
+
