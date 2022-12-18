@@ -32,34 +32,16 @@
   </p>
 </div>
 
-
-
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>项目列表</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
-  </ol>
-</details>
-
+## 模块列表
+- [design-pattern](https://github.com/igaozp/surabaya/tree/master/design-pattern) 设计模式相关示例
+- [feature](https://github.com/igaozp/surabaya/tree/master/feature) Java 特性相关代码示例
+- [helidon-nima](https://github.com/igaozp/surabaya/tree/master/helidon-nima) Helidon Níma 框架工程示例
+- [jpa](https://github.com/igaozp/surabaya/tree/master/jpa) JPA 代码示例
+- [mybatis](https://github.com/igaozp/surabaya/tree/master/mybatis) MyBatis 代码示例
+- [quarkus](https://github.com/igaozp/surabaya/tree/master/quarkus) Quarkus 框架示例
+- [redistream](https://github.com/igaozp/surabaya/tree/master/redistream) Redis Stream 使用示例
+- [spring](https://github.com/igaozp/surabaya/tree/master/spring) Spring 框架示例
+- [transaction](https://github.com/igaozp/surabaya/tree/master/transaction) 事务相关代码示例
 
 <!-- LICENSE -->
 ## License
