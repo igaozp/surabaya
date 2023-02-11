@@ -1,11 +1,11 @@
 package xyz.andornot.behavioral.visitor;
 
 public class Rectangle implements Shape {
-    private int id;
-    private int x;
-    private int y;
-    private int width;
-    private int height;
+    private final int id;
+    private final int x;
+    private final int y;
+    private final int width;
+    private final int height;
 
     public Rectangle(int id, int x, int y, int width, int height) {
         this.id = id;

@@ -3,14 +3,14 @@ package xyz.andornot.creational.prototype;
 import java.util.Objects;
 
 public abstract class Shape {
-    public int x;
-    public int y;
-    public String color;
+    protected int x;
+    protected int y;
+    protected String color;
 
-    public Shape() {
+    protected Shape() {
     }
 
-    public Shape(Shape target) {
+    protected Shape(Shape target) {
         if (target != null) {
             this.x = target.x;
             this.y = target.y;

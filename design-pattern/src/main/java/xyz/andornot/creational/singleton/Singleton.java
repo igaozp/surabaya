@@ -2,7 +2,7 @@ package xyz.andornot.creational.singleton;
 
 public class Singleton {
     private static Singleton instance;
-    public String value;
+    protected String value;
 
     private Singleton(String value) {
         try {

@@ -8,8 +8,8 @@ import javax.swing.border.Border;
 import java.awt.*;
 
 public class ImageEditor {
-    private EditorCanvas canvas;
-    private CompoundShape allShapes = new CompoundShape();
+    private final EditorCanvas canvas;
+    private final CompoundShape allShapes = new CompoundShape();
 
     public ImageEditor() {
         canvas = new EditorCanvas();
@@ -44,10 +44,12 @@ public class ImageEditor {
             frame.getContentPane().setBackground(Color.LIGHT_GRAY);
         }
 
+        @Override
         public int getWidth() {
             return allShapes.getX() + allShapes.getWidth() + PADDING;
         }
 
+        @Override
         public int getHeight() {
             return allShapes.getY() + allShapes.getHeight() + PADDING;
         }
@@ -57,6 +59,7 @@ public class ImageEditor {
             frame.pack();
         }
 
+        @Override
         public void paint(Graphics graphics) {
             allShapes.paint(graphics);
         }

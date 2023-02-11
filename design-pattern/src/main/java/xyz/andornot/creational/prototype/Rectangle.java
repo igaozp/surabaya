@@ -1,8 +1,8 @@
 package xyz.andornot.creational.prototype;
 
 public class Rectangle extends Shape {
-    public int width;
-    public int height;
+    protected int width;
+    protected int height;
 
     public Rectangle() {
     }

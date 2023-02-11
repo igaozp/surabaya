@@ -1,7 +1,7 @@
 package xyz.andornot.creational.prototype;
 
 public class Circle extends Shape {
-    public int radius;
+    protected int radius;
 
     public Circle() {
     }

@@ -9,7 +9,7 @@ public class Car {
     private final Transmission transmission;
     private final TripComputer tripComputer;
     private final GPSNavigator gpsNavigator;
-    private double fuel = 0;
+    private final double fuel = 0;
 
     public Car(CarType carType, int seats, Engine engine, Transmission transmission, TripComputer tripComputer, GPSNavigator gpsNavigator) {
         this.carType = carType;

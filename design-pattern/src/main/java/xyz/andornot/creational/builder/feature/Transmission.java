@@ -2,7 +2,7 @@ package xyz.andornot.creational.builder.feature;
 
 public enum Transmission {
     SINGLE_SPEED,
-    MANULA,
+    MANUAL,
     AUTOMATIC,
     SEMI_AUTOMATIC
 }
