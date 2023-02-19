@@ -6,7 +6,7 @@ import spock.lang.Specification
 
 import javax.annotation.Resource
 
-@SpringBootTest(classes = RedistreamApplication)
+@SpringBootTest(classes = RedisApplication)
 class LoadContextTest extends Specification {
     @Resource
     private RedisTemplate<String, Object> redisTemplate

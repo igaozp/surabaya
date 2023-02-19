@@ -4,7 +4,6 @@ import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
 
-import javax.annotation.Resource;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
@@ -14,8 +13,11 @@ import java.util.concurrent.TimeUnit;
  */
 @Component
 public class StreamMessageRunner implements ApplicationRunner {
-    @Resource
-    private StreamProducer streamProducer;
+    private final StreamProducer streamProducer;
+
+    public StreamMessageRunner(StreamProducer streamProducer) {
+        this.streamProducer = streamProducer;
+    }
 
     @Override
     public void run(ApplicationArguments args) {

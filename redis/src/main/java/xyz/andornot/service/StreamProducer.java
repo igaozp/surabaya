@@ -7,8 +7,6 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
 import xyz.andornot.domain.Person;
 
-import javax.annotation.Resource;
-
 /**
  * @author igaozp
  * @since 2022/2/15
@@ -16,8 +14,11 @@ import javax.annotation.Resource;
 @Slf4j
 @Component
 public class StreamProducer {
-    @Resource
-    private RedisTemplate<String, Object> redisTemplate;
+    private final RedisTemplate<String, Object> redisTemplate;
+
+    public StreamProducer(RedisTemplate<String, Object> redisTemplate) {
+        this.redisTemplate = redisTemplate;
+    }
 
     public void sendRecord(String key) {
         var person = new Person("Alice", 20);

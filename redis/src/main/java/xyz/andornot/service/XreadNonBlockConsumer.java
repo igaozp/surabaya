@@ -11,7 +11,6 @@ import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
 import xyz.andornot.domain.Person;
 
-import javax.annotation.Resource;
 import java.time.Duration;
 import java.util.concurrent.LinkedBlockingDeque;
 import java.util.concurrent.ThreadPoolExecutor;
@@ -28,9 +27,12 @@ import java.util.concurrent.TimeUnit;
 @Component
 public class XreadNonBlockConsumer implements InitializingBean, DisposableBean {
     private ThreadPoolExecutor threadPoolExecutor;
-    @Resource
-    private RedisTemplate<String, Object> redisTemplate;
+    private final RedisTemplate<String, Object> redisTemplate;
     private volatile boolean stop = false;
+
+    public XreadNonBlockConsumer(RedisTemplate<String, Object> redisTemplate) {
+        this.redisTemplate = redisTemplate;
+    }
 
     @Override
     public void destroy() {
