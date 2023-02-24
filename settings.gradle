@@ -1,5 +1,5 @@
 rootProject.name = 'surabaya'
-include 'feature'
+include 'java'
 include 'mybatis'
 include 'spring'
 include 'redis'
