@@ -26,6 +26,6 @@ public class StreamJsonController {
                 .map(i -> new Data(i, Instant.now()));
     }
 
-    public record Data(Long seqNo, Instant timestamp) {
+    record Data(Long seqNo, Instant timestamp) {
     }
 }
