@@ -39,7 +39,7 @@
 - [jpa](https://github.com/igaozp/surabaya/tree/master/jpa) JPA 代码示例
 - [mybatis](https://github.com/igaozp/surabaya/tree/master/mybatis) MyBatis 代码示例
 - [quarkus](https://github.com/igaozp/surabaya/tree/master/quarkus) Quarkus 框架示例
-- [redistream](https://github.com/igaozp/surabaya/tree/master/redistream) Redis Stream 使用示例
+- [redis](https://github.com/igaozp/surabaya/tree/master/redis) Redis 使用示例
 - [spring](https://github.com/igaozp/surabaya/tree/master/spring) Spring 框架示例
 - [transaction](https://github.com/igaozp/surabaya/tree/master/transaction) 事务相关代码示例
 
