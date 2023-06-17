@@ -16,3 +16,6 @@ include 'middleware:redis'
 
 include 'lang:java'
 include 'lang:kotlin'
+
+include 'orm:jpa'
+include 'orm:mybatis'
