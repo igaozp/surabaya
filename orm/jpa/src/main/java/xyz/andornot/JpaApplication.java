@@ -33,7 +33,7 @@ public class JpaApplication {
             var customer = repository.findById(1L);
             LOG.info("Customer found with findById(1L)");
             LOG.info("--------------------------------");
-            LOG.info(customer.toString());
+            LOG.info("{}", customer);
 
             LOG.info("Customer found with findByLastName('Bauer'):");
             LOG.info("--------------------------------------------");
