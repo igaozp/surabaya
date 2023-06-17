@@ -10,7 +10,5 @@ include 'design-pattern'
 include 'jpa'
 include 'kotlin'
 include 'spring:next'
-findProject(':spring:next')?.name = 'next'
 include 'spring:web'
-findProject(':spring:web')?.name = 'web'
-
+include 'spring:transaction'
