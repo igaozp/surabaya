@@ -1,12 +1,12 @@
 package xyz.andornot.resource;
 
 import io.smallrye.common.annotation.RunOnVirtualThread;
+import jakarta.inject.Inject;
+import jakarta.ws.rs.*;
 import org.jboss.logging.Logger;
 import xyz.andornot.domain.Person;
 import xyz.andornot.repository.PersonRepositoryAsyncAwait;
 
-import javax.inject.Inject;
-import javax.ws.rs.*;
 import java.util.List;
 
 @Path("/persons")
