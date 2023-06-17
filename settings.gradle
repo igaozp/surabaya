@@ -1,14 +1,12 @@
 rootProject.name = 'surabaya'
-include 'java'
+
 include 'mybatis'
 include 'spring'
-include 'redis'
-include 'transaction'
+
 include 'helidon-nima'
 include 'quarkus:virtual-threads'
 include 'design-pattern'
 include 'jpa'
-include 'kotlin'
 
 include 'spring:next'
 include 'spring:web'
@@ -16,3 +14,5 @@ include 'spring:transaction'
 
 include 'middleware:redis'
 
+include 'lang:java'
+include 'lang:kotlin'
