@@ -1,10 +1,10 @@
 package xyz.andornot.mapper;
 
+import jakarta.annotation.Resource;
 import org.junit.jupiter.api.Test;
 import org.mybatis.spring.boot.test.autoconfigure.MybatisTest;
 import xyz.andornot.domain.Employee;
 
-import javax.annotation.Resource;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
