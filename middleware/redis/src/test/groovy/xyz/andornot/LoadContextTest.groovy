@@ -1,12 +1,13 @@
 package xyz.andornot
 
+import jakarta.annotation.Resource
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.data.redis.core.RedisTemplate
+import org.springframework.test.context.ContextConfiguration
 import spock.lang.Specification
 
-import javax.annotation.Resource
-
-@SpringBootTest(classes = RedisApplication)
+@SpringBootTest
+@ContextConfiguration
 class LoadContextTest extends Specification {
     @Resource
     private RedisTemplate<String, Object> redisTemplate

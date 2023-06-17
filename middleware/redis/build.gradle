@@ -11,14 +11,16 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-data-redis:3.0.0'
-    implementation 'com.fasterxml.jackson.core:jackson-databind:2.14.0'
-    implementation 'org.codehaus.groovy:groovy:3.0.13'
+    compileOnly 'org.projectlombok:lombok:1.18.28'
+    annotationProcessor 'org.projectlombok:lombok:1.18.28'
+
+    implementation 'org.springframework.boot:spring-boot-starter-data-redis:3.1.0'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.2'
+    implementation 'org.codehaus.groovy:groovy:3.0.17'
+
     testImplementation 'org.spockframework:spock-core:2.3-groovy-3.0'
     testImplementation 'org.spockframework:spock-spring:2.3-groovy-3.0'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test:3.0.0'
-    compileOnly 'org.projectlombok:lombok:1.18.24'
-    annotationProcessor 'org.projectlombok:lombok:1.18.24'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test:3.1.0'
 }
 
 test {
