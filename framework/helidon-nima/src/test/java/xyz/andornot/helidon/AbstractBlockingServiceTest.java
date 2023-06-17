@@ -3,7 +3,6 @@ package xyz.andornot.helidon;
 import io.helidon.common.http.Http;
 import io.helidon.nima.testing.junit5.webserver.SetUpRoute;
 import io.helidon.nima.webclient.http1.Http1Client;
-import io.helidon.nima.webclient.http1.Http1ClientResponse;
 import io.helidon.nima.webserver.http.HttpRouting;
 import org.junit.jupiter.api.Test;
 import xyz.andornot.helidon.nima.BlockingService;

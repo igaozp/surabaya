@@ -1,21 +1,17 @@
 rootProject.name = 'surabaya'
 
-include 'mybatis'
-include 'spring'
-
-include 'helidon-nima'
-include 'quarkus:virtual-threads'
-include 'design-pattern'
-include 'jpa'
-
-include 'spring:next'
-include 'spring:web'
-include 'spring:transaction'
-
-include 'middleware:redis'
+include 'framework:helidon-nima'
+include 'framework:quarkus:virtual-threads'
+include 'framework:spring:next'
+include 'framework:spring:web'
+include 'framework:spring:transaction'
 
 include 'lang:java'
 include 'lang:kotlin'
 
 include 'orm:jpa'
 include 'orm:mybatis'
+
+include 'middleware:redis'
+
+include 'design-pattern'
