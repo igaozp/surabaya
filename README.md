@@ -25,25 +25,53 @@
   <h3 align="center">surabaya</h3>
 
   <p align="center">
-    A repository of code examples around the Java ecosystem!
+    A repository of code examples around the JVM ecosystem!
     <br />
-    一个围绕 Java 相关生态的示例代码库！
+    一个围绕 JVM 相关生态的示例代码库！
     <br />
   </p>
 </div>
 
 ## 模块列表
-- [design-pattern](https://github.com/igaozp/surabaya/tree/master/design-pattern) 设计模式相关示例
-- [feature](https://github.com/igaozp/surabaya/tree/master/feature) Java 特性相关代码示例
-- [helidon-nima](https://github.com/igaozp/surabaya/tree/master/helidon-nima) Helidon Níma 框架工程示例
-- [jpa](https://github.com/igaozp/surabaya/tree/master/jpa) JPA 代码示例
-- [mybatis](https://github.com/igaozp/surabaya/tree/master/mybatis) MyBatis 代码示例
-- [quarkus](https://github.com/igaozp/surabaya/tree/master/quarkus) Quarkus 框架示例
-- [redis](https://github.com/igaozp/surabaya/tree/master/redis) Redis 使用示例
-- [spring](https://github.com/igaozp/surabaya/tree/master/spring) Spring 框架示例
-- [transaction](https://github.com/igaozp/surabaya/tree/master/transaction) 事务相关代码示例
+
+### lang
+
+JVM 相关语言实践
+
+- `lang:java` **Java** 代码示例
+- `lang:kotlin` **Kotlin** 代码示例
+
+### framework
+
+JVM 常用框架示例代码
+
+- `framework:helidon-nima` **Helidon Nima** 框架示例
+- `framework:quarkus` **Quarkus** 框架示例
+    - `framework:quarkus:virtual-threads` **Quarkus** 使用 **Virtual Threads** 特性示例
+- `framework:spring` **Spring** 框架示例
+    - `framework:spring:next` **Spring** 最新版本示例
+    - `framework:spring:transaction` **Spring Transaction** 示例
+    - `framework:spring:web` **Spring Boot Web** 相关示例
+
+### middleware
+
+JVM 生态中间件示例代码
+
+- `middleware:redis` **Redis** 使用示例
+
+### orm
+
+JVM 生态 ORM 示例代码
+
+- `orm:jpa` **JPA** 示例代码
+- `orm:mybatis` **MyBatis** 示例代码
+
+### design-pattern
+
+设计模式示例代码
 
 <!-- LICENSE -->
+
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
