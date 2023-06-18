@@ -15,3 +15,5 @@ include 'orm:mybatis'
 include 'middleware:redis'
 
 include 'design-pattern'
+
+include 'arch:tdd'
