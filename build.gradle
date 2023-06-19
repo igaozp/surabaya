@@ -3,13 +3,13 @@ plugins {
     id 'java-library'
 }
 
-targetCompatibility(20)
-sourceCompatibility(20)
-
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(20)
+        languageVersion = JavaLanguageVersion.of(JavaVersion.VERSION_20.toString())
     }
+
+    targetCompatibility = JavaVersion.VERSION_20
+    sourceCompatibility = JavaVersion.VERSION_20
 }
 
 group 'xyz.andornot'
