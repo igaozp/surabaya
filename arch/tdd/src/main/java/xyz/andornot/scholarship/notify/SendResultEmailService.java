@@ -29,4 +29,10 @@ public class SendResultEmailService {
 
         return futures;
     }
+
+    public void silentSend(List<ScholarshipResult> results) {
+        for (ScholarshipResult result : results) {
+            executorService.submit(() -> mailer.silentSend(result));
+        }
+    }
 }
