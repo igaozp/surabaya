@@ -1,7 +1,8 @@
 package xyz.andornot.scholarship;
 
-public class PhDScholarshipCalculator {
-    static int calculatePhD(Transcript transcript) {
+public class PhDScholarshipCalculator implements Calculator {
+    @Override
+    public int calculate(Transcript transcript) {
         var courses = transcript.getCourses();
         if (courses.isEmpty()) {
             return 0;
