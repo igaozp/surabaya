@@ -4,7 +4,7 @@ public class PhDScholarshipCalculator implements Calculator {
     @Override
     public int calculate(Transcript transcript) {
         var courses = transcript.getCourses();
-        if (courses.isEmpty()) {
+        if (transcript.hasNoCourses()) {
             return 0;
         }
 
