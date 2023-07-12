@@ -6,10 +6,11 @@ import java.util.List;
 
 @Data
 public class Transcript {
-    private List<Course> courses;
     private String programType;
+    private List<Course> courses;
 
-    public Transcript(Course... courses) {
+    public Transcript(String programType, Course... courses) {
+        this.programType = programType;
         this.courses = List.of(courses);
     }
 }

@@ -72,7 +72,7 @@ public class ScholarshipService {
         var total = courses.size();
         var achieved = 0;
         for (Course course : courses) {
-            if (course.getScore() >= 0) {
+            if (course.getScore() >= 80) {
                 achieved++;
             }
         }
