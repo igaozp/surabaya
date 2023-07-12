@@ -9,19 +9,17 @@ public class ScholarshipService {
 
         var programType = transcript.getProgramType();
 
-        if (programType.equals("Bachelor")) {
-            return bachelorScholarshipCalculator.calculate(transcript);
-        }
+        var calculator = findCalculator(programType);
+        return calculator.calculate(transcript);
+    }
 
-        if (programType.equals("Master")) {
-            return masterScholarshipCalculator.calculate(transcript);
-        }
-
-        if (programType.equals("PhD")) {
-            return phdScholarshipCalculator.calculate(transcript);
-        }
-
-        throw new UnknownProgramTypeException(programType);
+    private Calculator findCalculator(String programType) throws UnknownProgramTypeException {
+        return switch (programType) {
+            case "Bachelor" -> bachelorScholarshipCalculator;
+            case "Master" -> masterScholarshipCalculator;
+            case "PhD" -> phdScholarshipCalculator;
+            default -> throw new UnknownProgramTypeException(programType);
+        };
     }
 
     public static class UnknownProgramTypeException extends Throwable {
