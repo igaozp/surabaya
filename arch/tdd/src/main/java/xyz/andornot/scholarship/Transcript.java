@@ -6,8 +6,13 @@ import java.util.List;
 
 @Data
 public class Transcript {
+    private long studentId;
     private String programType;
     private List<Course> courses;
+
+    public Transcript(long studentId) {
+        this.studentId = studentId;
+    }
 
     public Transcript(String programType, Course... courses) {
         this.programType = programType;

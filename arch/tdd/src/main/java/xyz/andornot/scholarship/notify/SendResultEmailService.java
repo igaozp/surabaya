@@ -35,4 +35,8 @@ public class SendResultEmailService {
             executorService.submit(() -> mailer.silentSend(result));
         }
     }
+
+    public void send(long studentId, String message) {
+        // TBD
+    }
 }
