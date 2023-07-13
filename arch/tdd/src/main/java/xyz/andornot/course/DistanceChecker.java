@@ -10,14 +10,11 @@ public class DistanceChecker {
         this.distanceCalculator = distanceCalculator;
     }
 
-    public boolean checkDistance(long courseId, double longitude, double latitude) {
+    public boolean checkDistance(long courseId, Position position) {
         var course = courseRepository.find(courseId);
         var classRoom = course.getClassRoom();
 
-        var classRoomLongitude = classRoom.getLongitude();
-        var classRoomLatitude = classRoom.getLatitude();
-
-        var distance = distanceCalculator.calculate(longitude, latitude, classRoomLongitude, classRoomLatitude);
+        var distance = distanceCalculator.calculate(position, classRoom.getPosition());
 
         return distance < 50D;
     }

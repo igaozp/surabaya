@@ -8,25 +8,25 @@ public class DistanceCheckerTest {
     @Test
     void close_enough() {
         var distanceChecker = new DistanceChecker(
-                dummy_repository(9527L, 0D, 0D),
-                dummy_calculator(1D, 1D, 0D, 0D, 49D)
+                dummy_repository(9527L, new Position(0D, 0D)),
+                dummy_calculator(1D, new Position(1D, 0D), new Position(0D, 49D))
         );
 
-        Assertions.assertTrue(distanceChecker.checkDistance(9527L, 1D, 1D));
+        Assertions.assertTrue(distanceChecker.checkDistance(9527L, new Position(1D, 1D)));
     }
 
     @Test
     void too_far() {
         var distanceChecker = new DistanceChecker(
-                dummy_repository(9527L, 0D, 0D),
-                dummy_calculator(99D, 99D, 0D, 0D, 51D)
+                dummy_repository(9527L, new Position(0D, 0D)),
+                dummy_calculator(99D, new Position(99D, 0D), new Position(0D, 51D))
         );
 
-        Assertions.assertTrue(distanceChecker.checkDistance(9527L, 99D, 99D));
+        Assertions.assertTrue(distanceChecker.checkDistance(9527L, new Position(99D, 99D)));
     }
 
-    private CourseRepository dummy_repository(long courseId, double longitude, double latitude) {
-        var course = new Course(new ClassRoom(longitude, latitude));
+    private CourseRepository dummy_repository(long courseId, Position position) {
+        var course = new Course(new ClassRoom(position));
 
         CourseRepository repository = Mockito.mock(CourseRepository.class);
 
@@ -35,10 +35,10 @@ public class DistanceCheckerTest {
         return repository;
     }
 
-    private DistanceCalculator dummy_calculator(double distance, double longitude1, double latitude1, double longitude2, double latitude2) {
+    private DistanceCalculator dummy_calculator(double distance, Position position1, Position position2) {
         DistanceCalculator calculator = Mockito.mock(DistanceCalculator.class);
 
-        Mockito.when(calculator.calculate(longitude1, latitude1, longitude2, latitude2)).thenReturn(distance);
+        Mockito.when(calculator.calculate(position1, position2)).thenReturn(distance);
 
         return calculator;
     }
