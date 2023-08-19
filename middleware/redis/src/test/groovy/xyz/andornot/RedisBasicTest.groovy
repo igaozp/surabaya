@@ -22,8 +22,8 @@ class RedisBasicTest extends Specification {
         redisTemplate.opsForValue().get("key") == "value"
     }
 
-//    def "clean"() {
-//        expect: "clean OK"
-//        redisTemplate.delete("key")
-//    }
+    def "clean"() {
+        expect: "clean OK"
+        redisTemplate.delete("key")
+    }
 }
