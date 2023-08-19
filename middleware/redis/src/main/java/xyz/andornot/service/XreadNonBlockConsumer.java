@@ -7,7 +7,6 @@ import org.springframework.data.redis.connection.stream.ReadOffset;
 import org.springframework.data.redis.connection.stream.StreamOffset;
 import org.springframework.data.redis.connection.stream.StreamReadOptions;
 import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
 import xyz.andornot.domain.Person;
 
@@ -24,7 +23,7 @@ import java.util.concurrent.TimeUnit;
  * @since 2022/2/16
  */
 @Slf4j
-@Component
+//@Component
 public class XreadNonBlockConsumer implements InitializingBean, DisposableBean {
     private ThreadPoolExecutor threadPoolExecutor;
     private final RedisTemplate<String, Object> redisTemplate;

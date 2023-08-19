@@ -1,13 +1,13 @@
 version: '3.8'
 services:
-  cache:
-    image: latest
+  redis:
+    image: redis/redis-stack-server:latest
     restart: always
     ports:
       - '6379:6379'
-    command: redis-server --save 20 1 --loglevel warning
+    command: redis-stack-server --save 20 1 --loglevel warning
     volumes:
-      - cache:/data
+      - redis:/data
 volumes:
-  cache:
+  redis:
     driver: local
