@@ -19,7 +19,7 @@ dependencies {
     implementation 'io.quarkus:quarkus-resteasy-reactive-jackson:3.3.0'
     implementation 'io.quarkus:quarkus-reactive-pg-client:3.2.4.Final'
     implementation 'net.datafaker:datafaker:2.0.1'
-    implementation 'io.quarkus:quarkus-hibernate-orm-panache:3.2.4.Final'
+    implementation 'io.quarkus:quarkus-hibernate-orm-panache:3.3.0'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.10.0'
 }
