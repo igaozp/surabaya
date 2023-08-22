@@ -12,7 +12,7 @@ repositories {
 dependencies {
     implementation 'io.helidon.nima.webserver:helidon-nima-webserver:4.0.0-M1'
     implementation 'io.helidon.nima.webclient:helidon-nima-webclient:4.0.0-M1'
-    implementation 'io.helidon.nima.http2:helidon-nima-http2:4.0.0-ALPHA6'
+    implementation 'io.helidon.nima.http2:helidon-nima-http2:4.0.0-M1'
 
     testImplementation 'org.hamcrest:hamcrest-all:1.3'
     testImplementation 'io.helidon.nima.testing.junit5:helidon-nima-testing-junit5-webserver:4.0.0-M1'
