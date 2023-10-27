@@ -8,8 +8,8 @@ java {
         languageVersion = JavaLanguageVersion.of(JavaVersion.VERSION_20.toString())
     }
 
-    targetCompatibility = JavaVersion.VERSION_20
-    sourceCompatibility = JavaVersion.VERSION_20
+    targetCompatibility = JavaVersion.VERSION_21
+    sourceCompatibility = JavaVersion.VERSION_21
 }
 
 group 'xyz.andornot'
