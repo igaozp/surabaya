@@ -22,15 +22,15 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok:1.18.28'
     annotationProcessor "com.redis.om:redis-om-spring:$redisOmVersion"
 
-    implementation 'org.springframework.boot:spring-boot-starter-data-redis:3.1.2'
-    implementation 'org.springframework.boot:spring-boot-starter-web:3.1.2'
+    implementation 'org.springframework.boot:spring-boot-starter-data-redis:3.1.5'
+    implementation 'org.springframework.boot:spring-boot-starter-web:3.1.5'
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.2'
     implementation 'org.codehaus.groovy:groovy:3.0.17'
     implementation "com.redis.om:redis-om-spring:$redisOmVersion"
 
     testImplementation 'org.spockframework:spock-core:2.3-groovy-3.0'
     testImplementation 'org.spockframework:spock-spring:2.3-groovy-3.0'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test:3.1.2'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test:3.1.5'
 }
 
 test {

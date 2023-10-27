@@ -10,19 +10,19 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-web:3.1.2'
+    implementation 'org.springframework.boot:spring-boot-starter-web:3.1.5'
     implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.2'
     implementation 'com.h2database:h2:2.2.220'
 
-    compileOnly 'org.projectlombok:lombok:1.18.28'
-    annotationProcessor 'org.projectlombok:lombok:1.18.28'
-    testCompileOnly 'org.projectlombok:lombok:1.18.28'
-    testAnnotationProcessor 'org.projectlombok:lombok:1.18.28'
+    compileOnly 'org.projectlombok:lombok:1.18.30'
+    annotationProcessor 'org.projectlombok:lombok:1.18.30'
+    testCompileOnly 'org.projectlombok:lombok:1.18.30'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.30'
 
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.10.0'
 
     testImplementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter-test:3.0.2'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test:3.1.2'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test:3.1.5'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.0'
 }
 
