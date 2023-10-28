@@ -13,24 +13,20 @@ repositories {
     }
 }
 
-ext {
-    redisOmVersion = '0.8.7-SNAPSHOT'
-}
-
 dependencies {
-    compileOnly 'org.projectlombok:lombok:1.18.28'
-    annotationProcessor 'org.projectlombok:lombok:1.18.28'
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
     annotationProcessor "com.redis.om:redis-om-spring:$redisOmVersion"
 
-    implementation 'org.springframework.boot:spring-boot-starter-data-redis:3.1.5'
-    implementation 'org.springframework.boot:spring-boot-starter-web:3.1.5'
-    implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.2'
-    implementation 'org.codehaus.groovy:groovy:3.0.17'
+    implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'com.fasterxml.jackson.core:jackson-databind'
+    implementation 'org.codehaus.groovy:groovy'
     implementation "com.redis.om:redis-om-spring:$redisOmVersion"
 
-    testImplementation 'org.spockframework:spock-core:2.3-groovy-3.0'
-    testImplementation 'org.spockframework:spock-spring:2.3-groovy-3.0'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test:3.1.5'
+    testImplementation 'org.spockframework:spock-core'
+    testImplementation 'org.spockframework:spock-spring'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
 test {
