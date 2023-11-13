@@ -52,7 +52,7 @@ allprojects {
         implementation 'io.quarkus:quarkus-resteasy-reactive-jackson:3.5.0'
         implementation 'io.quarkus:quarkus-reactive-pg-client:3.5.0'
         implementation 'net.datafaker:datafaker:2.0.2'
-        implementation 'io.quarkus:quarkus-hibernate-orm-panache:3.5.0'
+        implementation 'io.quarkus:quarkus-hibernate-orm-panache:3.5.1'
         implementation 'org.openjdk.jmh:jmh-core:1.37'
 
         testImplementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter-test:3.0.2'
