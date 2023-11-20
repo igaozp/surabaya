@@ -44,7 +44,7 @@ allprojects {
 
         implementation 'com.h2database:h2:2.2.224'
         implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.2'
-        implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.3'
+        implementation 'com.fasterxml.jackson.core:jackson-databind:2.16.0'
         implementation 'org.codehaus.groovy:groovy:3.0.19'
         implementation 'io.helidon.nima.webserver:helidon-nima-webserver:4.0.0-M1'
         implementation 'io.helidon.nima.webclient:helidon-nima-webclient:4.0.0-M1'
