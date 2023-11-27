@@ -49,7 +49,7 @@ allprojects {
         implementation 'io.helidon.nima.webserver:helidon-nima-webserver:4.0.0-M1'
         implementation 'io.helidon.nima.webclient:helidon-nima-webclient:4.0.0-M1'
         implementation 'io.helidon.nima.http2:helidon-nima-http2:4.0.0-M1'
-        implementation 'io.quarkus:quarkus-resteasy-reactive-jackson:3.5.2'
+        implementation 'io.quarkus:quarkus-resteasy-reactive-jackson:3.6.0'
         implementation 'io.quarkus:quarkus-reactive-pg-client:3.5.2'
         implementation 'net.datafaker:datafaker:2.0.2'
         implementation 'io.quarkus:quarkus-hibernate-orm-panache:3.5.2'
