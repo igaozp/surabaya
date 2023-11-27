@@ -55,7 +55,7 @@ allprojects {
         implementation 'io.quarkus:quarkus-hibernate-orm-panache:3.5.2'
         implementation 'org.openjdk.jmh:jmh-core:1.37'
 
-        testImplementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter-test:3.0.2'
+        testImplementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter-test:3.0.3'
         testImplementation(enforcedPlatform('org.junit:junit-bom:5.10.1'))
         testImplementation('org.junit.jupiter:junit-jupiter')
         testImplementation 'org.spockframework:spock-core:2.3-groovy-3.0'
