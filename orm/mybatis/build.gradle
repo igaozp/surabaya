@@ -1,3 +1,10 @@
+buildscript {
+    ext {
+        h2Version = '2.2.224'
+        mybatisVersion = '3.0.3'
+    }
+}
+
 plugins {
     id 'java'
 }
@@ -11,17 +18,12 @@ repositories {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter'
-    implementation 'com.h2database:h2'
-
-    compileOnly 'org.projectlombok:lombok'
-    annotationProcessor 'org.projectlombok:lombok'
-    testCompileOnly 'org.projectlombok:lombok'
-    testAnnotationProcessor 'org.projectlombok:lombok'
+    implementation "org.mybatis.spring.boot:mybatis-spring-boot-starter:${mybatisVersion}"
+    implementation "com.h2database:h2:${h2Version}"
 
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
 
-    testImplementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter-test'
+    testImplementation "org.mybatis.spring.boot:mybatis-spring-boot-starter-test:${mybatisVersion}"
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.junit.jupiter:junit-jupiter-api'
 }

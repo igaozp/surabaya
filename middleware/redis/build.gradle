@@ -1,3 +1,12 @@
+buildscript {
+    ext {
+        redisOmVersion = '0.8.7'
+        jacksonVersion = '2.16.0'
+        groovyVersion = '3.0.19'
+        spockVersion = '2.3-groovy-3.0'
+    }
+}
+
 plugins {
     id 'java'
     id 'groovy'
@@ -14,18 +23,16 @@ repositories {
 }
 
 dependencies {
-    compileOnly 'org.projectlombok:lombok'
-    annotationProcessor 'org.projectlombok:lombok'
-    annotationProcessor "com.redis.om:redis-om-spring:$redisOmVersion"
+    annotationProcessor "com.redis.om:redis-om-spring:${redisOmVersion}"
 
     implementation 'org.springframework.boot:spring-boot-starter-data-redis'
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'com.fasterxml.jackson.core:jackson-databind'
-    implementation 'org.codehaus.groovy:groovy'
-    implementation "com.redis.om:redis-om-spring:$redisOmVersion"
+    implementation "com.fasterxml.jackson.core:jackson-databind:${jacksonVersion}"
+    implementation "org.codehaus.groovy:groovy:${groovyVersion}"
+    implementation "com.redis.om:redis-om-spring:${redisOmVersion}"
 
-    testImplementation 'org.spockframework:spock-core'
-    testImplementation 'org.spockframework:spock-spring'
+    testImplementation "org.spockframework:spock-core:${spockVersion}"
+    testImplementation "org.spockframework:spock-spring:${spockVersion}"
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 

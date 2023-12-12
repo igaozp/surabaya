@@ -1,3 +1,9 @@
+buildscript {
+    ext {
+        jmhVersion = '1.37'
+    }
+}
+
 plugins {
     id 'java'
 }
@@ -12,8 +18,8 @@ repositories {
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-    implementation 'org.openjdk.jmh:jmh-core'
-    testImplementation 'org.openjdk.jmh:jmh-generator-annprocess'
+    implementation "org.openjdk.jmh:jmh-core:${jmhVersion}"
+    testImplementation "org.openjdk.jmh:jmh-generator-annprocess:${jmhVersion}"
     testImplementation 'org.junit.jupiter:junit-jupiter-api'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
 }

@@ -1,3 +1,10 @@
+buildscript {
+    ext {
+        mockitoVersion = '5.2.0'
+        assertjVersion = '3.24.2'
+    }
+}
+
 plugins {
     id 'java'
 }
@@ -10,18 +17,10 @@ repositories {
 }
 
 dependencies {
-    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-test
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    // https://mvnrepository.com/artifact/org.mockito/mockito-inline
-    testImplementation 'org.mockito:mockito-inline'
-    // https://mvnrepository.com/artifact/org.assertj/assertj-core
-    testImplementation 'org.assertj:assertj-core'
-    compileOnly 'org.projectlombok:lombok'
-    annotationProcessor 'org.projectlombok:lombok'
-    testCompileOnly 'org.projectlombok:lombok'
-    testAnnotationProcessor 'org.projectlombok:lombok'
+    testImplementation "org.mockito:mockito-inline:${mockitoVersion}"
+    testImplementation "org.assertj:assertj-core:${assertjVersion}"
 }
 
 test {
