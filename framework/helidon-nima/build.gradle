@@ -1,6 +1,6 @@
 buildscript {
     ext {
-        helidonVersion = '4.0.0-ALPHA6'
+        helidonVersion = '4.0.0-M1'
         hamcrestVersion = '1.3'
     }
 }
