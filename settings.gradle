@@ -1,6 +1,6 @@
 rootProject.name = 'surabaya'
 
-include 'framework:helidon-nima'
+include 'framework:helidon'
 include 'framework:quarkus:virtual-threads'
 include 'framework:spring:next'
 include 'framework:spring:web'
