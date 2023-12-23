@@ -13,7 +13,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
-![GitHub top language](https://img.shields.io/github/languages/top/igaozp/surabaya?style=for-the-badge)
+![GitHub top lang](https://img.shields.io/github/languages/top/igaozp/surabaya?style=for-the-badge)
 
 <!-- PROJECT LOGO -->
 <br />
@@ -97,5 +97,6 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 [issues-url]: https://github.com/igaozp/surabaya/issues
 [license-shield]: https://img.shields.io/github/license/igaozp/surabaya.svg?style=for-the-badge
 [license-url]: https://github.com/igaozp/surabaya/blob/master/LICENSE.txt
-[github-top-language]: https://img.shields.io/github/languages/top/igaozp/surabaya?style=for-the-badge
+
+[github-top-lang]: https://img.shields.io/github/languages/top/igaozp/surabaya?style=for-the-badge
 
