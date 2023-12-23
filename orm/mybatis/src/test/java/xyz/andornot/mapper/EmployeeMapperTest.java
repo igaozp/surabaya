@@ -25,6 +25,6 @@ class EmployeeMapperTest {
     void selectAll() {
         List<Employee> employees = employeeMapper.selectAll();
         assertFalse(employees.isEmpty());
-        assertNotNull(employees.get(0).getFirstName());
+        assertNotNull(employees.getFirst().getFirstName());
     }
 }
