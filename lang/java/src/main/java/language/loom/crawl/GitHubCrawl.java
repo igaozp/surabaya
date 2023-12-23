@@ -2,7 +2,6 @@ package language.loom.crawl;
 
 import language.loom.crawl.page.PageTreeFactory;
 
-import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.http.HttpClient;
@@ -19,7 +18,7 @@ import java.net.http.HttpClient;
  */
 public class GitHubCrawl {
 
-    public static void main(String[] args) throws URISyntaxException, IOException, InterruptedException {
+    public static void main(String[] args) throws URISyntaxException, InterruptedException {
         System.out.printf("jcmd %s Thread.dump_to_file -format=json threads.json%n", ProcessHandle.current().pid());
 
         var seedUrl = new URI("https://github.com/junit-pioneer/junit-pioneer/pull/627");

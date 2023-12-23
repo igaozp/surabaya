@@ -1,5 +1,6 @@
 plugins {
-    kotlin("jvm") version "1.9.21"
+    kotlin("jvm") version "1.9.22"
+    application
 }
 
 group = "xyz.andornot"
@@ -9,18 +10,18 @@ repositories {
     mavenCentral()
 }
 
-java {
-    toolchain {
-        languageVersion = JavaLanguageVersion.of(JavaVersion.VERSION_17.toString())
-    }
-
-    targetCompatibility = JavaVersion.VERSION_17
-    sourceCompatibility = JavaVersion.VERSION_17
-}
-
 dependencies {
+    testImplementation(kotlin("test"))
 }
 
-tasks.getByName<Test>("test") {
+tasks.test {
     useJUnitPlatform()
+}
+
+kotlin {
+    jvmToolchain(21)
+}
+
+application {
+    mainClass.set("Main")
 }

@@ -35,6 +35,7 @@ dependencies {
 
 test {
     useJUnitPlatform()
+    jvmArgs '--enable-preview'
 }
 
 tasks.withType(JavaCompile).each {

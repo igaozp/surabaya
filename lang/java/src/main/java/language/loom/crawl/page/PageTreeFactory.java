@@ -1,6 +1,5 @@
 package language.loom.crawl.page;
 
-import jdk.incubator.concurrent.StructuredTaskScope;
 
 import java.io.IOException;
 import java.net.URI;
@@ -14,7 +13,7 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.ExecutionException;
-import java.util.concurrent.Future;
+import java.util.concurrent.StructuredTaskScope;
 
 import static java.util.Objects.requireNonNull;
 
@@ -52,13 +51,13 @@ public class PageTreeFactory {
         }
 
         try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
-            var futurePages = new ArrayList<Future<Page>>();
+            var futurePages = new ArrayList<StructuredTaskScope.Subtask<Page>>();
             links.forEach(link -> futurePages.add(scope.fork(() -> createPage(link, depth))));
 
             scope.join();
             scope.throwIfFailed();
 
-            return futurePages.stream().map(Future::resultNow).toList();
+            return futurePages.stream().map(StructuredTaskScope.Subtask::get).toList();
         } catch (ExecutionException e) {
             throw new IllegalStateException("Error cases should have seen handle during page creation!", e);
         }
