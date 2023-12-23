@@ -1,9 +1,12 @@
 package xyz.andornot.behavioral.visitor;
 
+import lombok.Getter;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class CompoundShape implements Shape {
+    @Getter
     private final int id;
     protected List<Shape> children = new ArrayList<>();
 
@@ -19,10 +22,6 @@ public class CompoundShape implements Shape {
     @Override
     public void draw() {
         // draw shape
-    }
-
-    public int getId() {
-        return id;
     }
 
     @Override

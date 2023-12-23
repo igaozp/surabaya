@@ -32,7 +32,7 @@ public class PersonRepositoryAsyncAwait {
     }
 
     public List<Person> findAll() {
-        log.info("findAll()" + Thread.currentThread());
+        log.info(STR."findAll()\{Thread.currentThread()}");
         RowSet<Row> rows = pgPool.preparedQuery("SELECT id, name, age, gender FROM person")
                 .executeAndAwait();
         return iterateAndCreate(rows);
@@ -42,7 +42,7 @@ public class PersonRepositoryAsyncAwait {
         var rowSet = pgPool.preparedQuery("SELECT id, name, age, gender FROM person WHERE id = $1")
                 .executeAndAwait(Tuple.of(id));
         var persons = iterateAndCreate(rowSet);
-        return persons.size() == 0 ? null : persons.get(0);
+        return persons.isEmpty() ? null : persons.getFirst();
     }
 
     public List<Person> findByName(String name) {
@@ -85,7 +85,7 @@ public class PersonRepositoryAsyncAwait {
         }
 
         pgPool.query("DROP TABLE IF EXISTS person").execute()
-                .flatMap(r -> pgPool.query(
+                .flatMap(_ -> pgPool.query(
                         """
                                 create table person (
                                     id serial primary key,
@@ -96,7 +96,7 @@ public class PersonRepositoryAsyncAwait {
                                 )
                                     """
                 ).execute())
-                .flatMap(r ->
+                .flatMap(_ ->
                         pgPool.preparedQuery("INSERT INTO person (name, age, gender, external_id) values ($1, $2, $3, $4)")
                                 .executeBatch(persons)
                 )
