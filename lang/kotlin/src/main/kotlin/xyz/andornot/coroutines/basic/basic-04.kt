@@ -1,4 +1,4 @@
-package xyz.andornot.coroutines
+package xyz.andornot.coroutines.basic
 
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.delay

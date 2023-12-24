@@ -1,13 +1,16 @@
-package xyz.andornot.coroutines
+package xyz.andornot.coroutines.basic
 
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 
 fun main() = runBlocking {
-    launch {
+    val job = launch {
         delay(1000L)
         println("World!")
     }
+
     print("Hello ")
+    job.join()
+    println("Done")
 }
