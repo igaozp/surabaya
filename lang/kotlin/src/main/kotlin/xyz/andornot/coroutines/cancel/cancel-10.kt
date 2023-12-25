@@ -1,4 +1,4 @@
-package xyz.andornot.cancel
+package xyz.andornot.coroutines.cancel
 
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
