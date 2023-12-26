@@ -1,4 +1,4 @@
-package lang.thread.threadlocal;
+package lang.concurrent.thread.threadlocal;
 
 public class SimpleThreadLocalExample {
     public static ThreadLocal<String> CONTEXT = ThreadLocal.withInitial(() -> null);

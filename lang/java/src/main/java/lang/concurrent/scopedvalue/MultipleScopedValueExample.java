@@ -1,4 +1,4 @@
-package lang.loom.scopedvalue;
+package lang.concurrent.scopedvalue;
 
 record ApplicationContext(String name, String ip) {
 }

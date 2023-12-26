@@ -1,4 +1,4 @@
-package lang.loom.virtualthreads;
+package lang.concurrent.virtualthreads;
 
 import java.util.stream.IntStream;
 

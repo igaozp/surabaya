@@ -1,4 +1,4 @@
-package lang.loom.scopedvalue;
+package lang.concurrent.scopedvalue;
 
 public class ForkScopedValueExample {
     private static final ScopedValue<String> CONTEXT = ScopedValue.newInstance();

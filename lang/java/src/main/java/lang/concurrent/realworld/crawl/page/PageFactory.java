@@ -1,4 +1,4 @@
-package lang.loom.crawl.page;
+package lang.concurrent.realworld.crawl.page;
 
 import javax.swing.text.AttributeSet;
 import javax.swing.text.MutableAttributeSet;

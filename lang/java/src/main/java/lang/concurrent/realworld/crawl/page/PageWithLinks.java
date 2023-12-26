@@ -1,4 +1,4 @@
-package lang.loom.crawl.page;
+package lang.concurrent.realworld.crawl.page;
 
 import java.net.URI;
 import java.util.Set;

@@ -1,4 +1,4 @@
-package lang.loom.scopedvalue;
+package lang.concurrent.scopedvalue;
 
 import java.util.concurrent.StructuredTaskScope;
 

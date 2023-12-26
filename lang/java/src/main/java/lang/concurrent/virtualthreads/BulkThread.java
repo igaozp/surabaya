@@ -1,4 +1,4 @@
-package lang.loom.virtualthreads;
+package lang.concurrent.virtualthreads;
 
 import java.time.Duration;
 import java.time.Instant;
