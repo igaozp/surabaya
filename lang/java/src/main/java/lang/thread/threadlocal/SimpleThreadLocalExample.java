@@ -1,6 +1,6 @@
 package lang.thread.threadlocal;
 
-public class SampleThreadLocalExample {
+public class SimpleThreadLocalExample {
     public static ThreadLocal<String> CONTEXT = ThreadLocal.withInitial(() -> null);
     public static InheritableThreadLocal<String> INHERITABLE_CONTEXT = new InheritableThreadLocal<>();
 
@@ -20,7 +20,7 @@ public class SampleThreadLocalExample {
             INHERITABLE_CONTEXT.set("TestValue");
             insideParentThread();
 
-            var childThread = new Thread(SampleThreadLocalExample::insideChildThread);
+            var childThread = new Thread(SimpleThreadLocalExample::insideChildThread);
             childThread.start();
             insideParentThread();
         });
