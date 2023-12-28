@@ -5,6 +5,7 @@ include 'framework:quarkus:virtual-threads'
 include 'framework:spring:next'
 include 'framework:spring:web'
 include 'framework:spring:transaction'
+include 'framework:spring:reactive'
 
 include 'lang:java'
 include 'lang:kotlin'

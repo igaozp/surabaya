@@ -45,13 +45,14 @@ JVM 相关语言实践
 
 JVM 常用框架示例代码
 
-- `framework:helidon-nima` **Helidon Nima** 框架示例
+- `framework:helidon` **Helidon** 框架示例
 - `framework:quarkus` **Quarkus** 框架示例
     - `framework:quarkus:virtual-threads` **Quarkus** 使用 **Virtual Threads** 特性示例
 - `framework:spring` **Spring** 框架示例
     - `framework:spring:next` **Spring** 最新版本示例
     - `framework:spring:transaction` **Spring Transaction** 示例
     - `framework:spring:web` **Spring Boot Web** 相关示例
+  - `framework:spring:reactive` **Spring Boot Reactive** 相关示例
 
 ### middleware
 
