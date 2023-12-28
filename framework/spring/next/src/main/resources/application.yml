@@ -2,3 +2,12 @@ spring:
   threads:
     virtual:
       enabled: on
+  application:
+    name: SpringNext
+  main:
+    keep-alive: on
+
+management:
+  endpoint:
+    shutdown:
+      enabled: true
