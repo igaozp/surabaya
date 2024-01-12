@@ -3,7 +3,7 @@ package xyz.andornot.coroutines.context
 import kotlinx.coroutines.async
 import kotlinx.coroutines.runBlocking
 
-fun log(msg: String) = println("[${Thread.currentThread().name}] $msg")
+private fun log(msg: String) = println("[${Thread.currentThread().name}] $msg")
 
 // run with -Dkotlinx.coroutines.debug
 fun main() = runBlocking {
