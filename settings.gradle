@@ -6,6 +6,7 @@ include 'framework:spring:next'
 include 'framework:spring:web'
 include 'framework:spring:transaction'
 include 'framework:spring:reactive'
+include 'framework:spring:connection-pool'
 
 include 'lang:java'
 include 'lang:kotlin'
