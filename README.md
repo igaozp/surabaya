@@ -17,14 +17,14 @@
 
 <!-- PROJECT LOGO -->
 <br />
-<div align="center">
+<div style="text-align: center;">
   <a href="https://github.com/igaozp/surabaya">
     <img src="images/logo.svg" alt="Logo" width="400" height="400">
   </a>
 
   <h3 align="center">surabaya</h3>
 
-  <p align="center">
+  <p style="text-align: center;">
     A repository of code examples around the JVM ecosystem!
     <br />
     一个围绕 JVM 相关生态的示例代码库！
