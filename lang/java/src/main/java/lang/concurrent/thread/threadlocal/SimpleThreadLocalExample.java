@@ -1,8 +1,8 @@
 package lang.concurrent.thread.threadlocal;
 
 public class SimpleThreadLocalExample {
-    public static ThreadLocal<String> CONTEXT = ThreadLocal.withInitial(() -> null);
-    public static InheritableThreadLocal<String> INHERITABLE_CONTEXT = new InheritableThreadLocal<>();
+    public static final ThreadLocal<String> CONTEXT = ThreadLocal.withInitial(() -> null);
+    public static final InheritableThreadLocal<String> INHERITABLE_CONTEXT = new InheritableThreadLocal<>();
 
     static void insideParentThread() {
         System.out.println(STR."ThreadLocal Value in insideParentThread(): \{CONTEXT.get()}");

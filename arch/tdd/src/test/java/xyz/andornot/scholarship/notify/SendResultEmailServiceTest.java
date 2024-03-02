@@ -12,9 +12,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.*;
 
 class SendResultEmailServiceTest {
-    private Mailer mailer = mock(Mailer.class);
+    private final Mailer mailer = mock(Mailer.class);
     private List<Future<Boolean>> futures;
-    private SendResultEmailService service = new SendResultEmailService(mailer);
+    private final SendResultEmailService service = new SendResultEmailService(mailer);
 
     @Test
     void when_send_returns_future() throws ExecutionException, InterruptedException {

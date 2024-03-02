@@ -4,8 +4,8 @@ import javax.swing.*;
 import java.awt.*;
 
 public class WindowsButton implements Button {
-    JPanel panel = new JPanel();
-    JFrame frame = new JFrame();
+    final JPanel panel = new JPanel();
+    final JFrame frame = new JFrame();
     JButton button = new JButton();
 
     @Override

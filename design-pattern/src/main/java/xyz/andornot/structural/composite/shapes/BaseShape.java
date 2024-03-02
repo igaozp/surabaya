@@ -5,7 +5,7 @@ import java.awt.*;
 abstract class BaseShape implements Shape {
     protected int x;
     protected int y;
-    protected Color color;
+    protected final Color color;
     private boolean selected = false;
 
     BaseShape(int x, int y, Color color) {

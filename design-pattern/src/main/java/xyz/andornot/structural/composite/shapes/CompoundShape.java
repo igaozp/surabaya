@@ -6,7 +6,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class CompoundShape extends BaseShape {
-    protected List<Shape> children = new ArrayList<>();
+    protected final List<Shape> children = new ArrayList<>();
 
     public CompoundShape(Shape... components) {
         super(0, 0, Color.BLACK);

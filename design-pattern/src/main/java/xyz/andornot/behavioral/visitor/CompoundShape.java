@@ -8,7 +8,7 @@ import java.util.List;
 public class CompoundShape implements Shape {
     @Getter
     private final int id;
-    protected List<Shape> children = new ArrayList<>();
+    protected final List<Shape> children = new ArrayList<>();
 
     public CompoundShape(int id) {
         this.id = id;

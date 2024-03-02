@@ -3,7 +3,7 @@ package xyz.andornot.creational.singleton;
 public final class SafeSingleton {
     // The field must be declared volatile so that double check lock would work correctly.
     private static volatile SafeSingleton instance;
-    public String value;
+    public final String value;
 
     private SafeSingleton(String value) {
         this.value = value;

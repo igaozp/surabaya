@@ -1,9 +1,9 @@
 package xyz.andornot.structural.proxy;
 
 public class Video {
-    public String id;
-    public String title;
-    public String data;
+    public final String id;
+    public final String title;
+    public final String data;
 
     Video(String id, String title) {
         this.id = id;
