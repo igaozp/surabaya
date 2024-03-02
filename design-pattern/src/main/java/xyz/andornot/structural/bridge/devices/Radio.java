@@ -29,10 +29,8 @@ public class Radio implements Device {
     public void setVolume(int percent) {
         if (percent > 100) {
             volume = 100;
-        } else if (percent < 0) {
-            volume = 0;
         } else {
-            volume = percent;
+            volume = Math.max(percent, 0);
         }
     }
 

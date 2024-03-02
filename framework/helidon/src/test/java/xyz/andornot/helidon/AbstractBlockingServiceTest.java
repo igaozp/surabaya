@@ -99,7 +99,7 @@ abstract class AbstractBlockingServiceTest {
     }
 
     private void validateUnique(int[] results) {
-        assertThat(STR."Results should be distinct: \{Arrays.toString(results)}", results.length, is((int) Arrays.stream(results).boxed().count()));
+        assertThat(STR."Results should be distinct: \{Arrays.toString(results)}", results.length, is((int) Arrays.stream(results).count()));
     }
 
     private int[] splitAndValidateEntity(String entity) {

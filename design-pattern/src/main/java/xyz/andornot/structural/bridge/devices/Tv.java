@@ -29,10 +29,8 @@ public class Tv implements Device {
     public void setVolume(int percent) {
         if (percent > 100) {
             this.volume = 100;
-        } else if (percent < 0) {
-            this.volume = 0;
         } else {
-            this.volume = percent;
+            this.volume = Math.max(percent, 0);
         }
     }
 

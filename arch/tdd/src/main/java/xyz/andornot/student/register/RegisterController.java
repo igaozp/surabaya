@@ -21,7 +21,7 @@ public class RegisterController {
             registerService.execute(request);
             return ResponseEntity.ok(ApiResponse.empty());
         } catch (StudentNotExistException e) {
-            log.info("Student not found. " + e.getMessage());
+            log.info("Student not found. {}", e.getMessage());
             return ResponseEntity.status(400).body(ApiResponse.bad(987));
         }
     }
