@@ -13,7 +13,7 @@ public class ApplicationChecker {
     }
 
     public boolean checkTime(Application application) {
-        var scholarship = scholarshipRepository.find(application.getScholarshipId());
+        var scholarship = scholarshipRepository.find(application.scholarshipId());
         var deadline = scholarship.getDeadline();
         var today = LocalDate.now();
         return today.isEqual(deadline) || today.isBefore(deadline);

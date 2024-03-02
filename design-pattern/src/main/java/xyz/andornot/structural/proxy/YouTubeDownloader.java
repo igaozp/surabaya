@@ -3,7 +3,7 @@ package xyz.andornot.structural.proxy;
 import java.util.HashMap;
 
 public class YouTubeDownloader {
-    private ThirdPartyYouTubeLib api;
+    private final ThirdPartyYouTubeLib api;
 
     public YouTubeDownloader(ThirdPartyYouTubeLib api) {
         this.api = api;

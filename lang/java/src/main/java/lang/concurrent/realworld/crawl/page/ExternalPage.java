@@ -26,6 +26,6 @@ public record ExternalPage(URI url, String content) implements SuccessfulPage {
 
     @Override
     public String toString() {
-        return "External @ " + url.toString();
+        return STR."External @ \{url.toString()}";
     }
 }

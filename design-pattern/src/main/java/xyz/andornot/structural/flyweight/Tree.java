@@ -3,9 +3,9 @@ package xyz.andornot.structural.flyweight;
 import java.awt.*;
 
 public class Tree {
-    private int x;
-    private int y;
-    private TreeType type;
+    private final int x;
+    private final int y;
+    private final TreeType type;
 
     public Tree(int x, int y, TreeType type) {
         this.x = x;

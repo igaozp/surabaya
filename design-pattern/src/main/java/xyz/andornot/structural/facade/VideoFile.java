@@ -1,8 +1,8 @@
 package xyz.andornot.structural.facade;
 
 public class VideoFile {
-    private String name;
-    private String codecType;
+    private final String name;
+    private final String codecType;
 
     public VideoFile(String name) {
         this.name = name;

@@ -43,7 +43,7 @@ public class XMLExportVisitor implements Visitor {
                     <width>%s</width>
                     <height>%s</height>
                 </rectangle>
-                """, rectangle.getId(), rectangle.getX(), rectangle.getY(), rectangle.getWidth(), rectangle.getHeight());
+                """, rectangle.id(), rectangle.x(), rectangle.y(), rectangle.width(), rectangle.height());
     }
 
     @Override

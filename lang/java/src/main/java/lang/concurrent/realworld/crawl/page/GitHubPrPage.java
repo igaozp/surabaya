@@ -36,6 +36,6 @@ public record GitHubPrPage(URI url, int prNumber, String content, Set<Page> link
 
     @Override
     public String toString() {
-        return "GitHub PR @ " + url.toString();
+        return STR."GitHub PR @ \{url.toString()}";
     }
 }

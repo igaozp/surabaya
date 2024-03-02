@@ -12,6 +12,6 @@ public class StudentRepository {
     }
 
     public Optional<Student> find(long student) {
-        return null;
+        return Optional.empty();
     }
 }

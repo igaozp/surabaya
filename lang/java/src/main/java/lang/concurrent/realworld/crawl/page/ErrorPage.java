@@ -26,6 +26,6 @@ public record ErrorPage(URI url, Exception ex) implements Page {
 
     @Override
     public String toString() {
-        return "Error @ " + url.toString();
+        return STR."Error @ \{url.toString()}";
     }
 }

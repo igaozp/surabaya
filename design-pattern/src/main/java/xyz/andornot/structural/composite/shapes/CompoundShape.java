@@ -38,7 +38,7 @@ public class CompoundShape extends BaseShape {
         if (children.isEmpty()) {
             return 0;
         }
-        var x = children.get(0).getX();
+        var x = children.getFirst().getX();
         for (Shape child : children) {
             x = Math.min(x, child.getX());
         }
@@ -50,7 +50,7 @@ public class CompoundShape extends BaseShape {
         if (children.isEmpty()) {
             return 0;
         }
-        var y = children.get(0).getY();
+        var y = children.getFirst().getY();
         for (Shape child : children) {
             y = Math.min(y, child.getY());
         }

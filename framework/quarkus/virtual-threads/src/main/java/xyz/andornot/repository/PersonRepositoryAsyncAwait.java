@@ -94,7 +94,7 @@ public class PersonRepositoryAsyncAwait {
                                     age int,
                                     external_id int
                                 )
-                                    """
+                                """
                 ).execute())
                 .flatMap(_ ->
                         pgPool.preparedQuery("INSERT INTO person (name, age, gender, external_id) values ($1, $2, $3, $4)")

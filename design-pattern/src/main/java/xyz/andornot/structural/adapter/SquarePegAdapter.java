@@ -9,6 +9,6 @@ public class SquarePegAdapter extends RoundPeg {
 
     @Override
     public double getRadius() {
-        return Math.sqrt(Math.pow((peg.getWidth() / 2), 2) * 2);
+        return Math.sqrt(Math.pow((peg.width() / 2), 2) * 2);
     }
 }
