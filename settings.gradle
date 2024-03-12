@@ -19,3 +19,5 @@ include 'middleware:redis'
 include 'design-pattern'
 
 include 'arch:tdd'
+
+include 'misc:troubleshooting'
