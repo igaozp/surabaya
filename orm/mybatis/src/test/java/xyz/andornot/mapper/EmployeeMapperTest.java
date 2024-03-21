@@ -4,11 +4,11 @@ import jakarta.annotation.Resource;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import xyz.andornot.domain.Employee;
+import xyz.andornot.service.EmployeeService;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * EmployeeMapperTest
@@ -20,11 +20,23 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 class EmployeeMapperTest {
     @Resource
     private EmployeeMapper employeeMapper;
+    @Resource
+    private EmployeeService employeeService;
 
     @Test
     void selectAll() {
         List<Employee> employees = employeeMapper.selectAll();
         assertFalse(employees.isEmpty());
         assertNotNull(employees.getFirst().getFirstName());
+    }
+
+    @Test
+    void getByName() {
+        assertTrue(employeeService.twiceQueryCheck());
+    }
+
+    @Test
+    void getByNameNoCache() {
+        assertFalse(employeeService.twiceQueryCheckNoCache());
     }
 }
