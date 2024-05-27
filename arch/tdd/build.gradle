@@ -1,7 +1,7 @@
 buildscript {
     ext {
         mockitoVersion = '5.2.0'
-        assertjVersion = '3.25.3'
+        assertjVersion = '3.26.0'
     }
 }
 
