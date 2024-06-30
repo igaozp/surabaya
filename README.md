@@ -66,6 +66,7 @@ JVM 生态 ORM 示例代码
 
 - `orm:jpa` **JPA** 示例代码
 - `orm:mybatis` **MyBatis** 示例代码
+- `orm:shadingsphere` **ShardingSphere** 示例代码
 
 ### design-pattern
 

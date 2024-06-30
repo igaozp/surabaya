@@ -13,6 +13,7 @@ include 'lang:kotlin'
 
 include 'orm:jpa'
 include 'orm:mybatis'
+include 'orm:shardingsphere'
 
 include 'middleware:redis'
 

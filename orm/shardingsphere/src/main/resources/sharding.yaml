@@ -1,0 +1,53 @@
+# JDBC 逻辑库名称。在集群模式中，使用该参数来联通 ShardingSphere-JDBC 与 ShardingSphere-Proxy。
+# 默认值：logic_db
+databaseName: sharding_db
+
+mode:
+  type: Cluster
+  repository:
+    # 持久化仓库类型
+    type: ZooKeeper
+    # 持久化仓库所需属性
+    props:
+      # 注册中心命名空间
+      namespace: governance
+      # 注册中心连接地址
+      server-lists: localhost:2181
+      retryIntervalMilliseconds: 500
+      timeToLiveSeconds: 60
+
+dataSources:
+  ds_1:
+    dataSourceClassName: com.zaxxer.hikari.HikariDataSource
+    driverClassName: com.mysql.jdbc.Driver
+    jdbcUrl: jdbc:mysql://localhost:3306/ds_1
+    username: root
+    password: password
+  ds_2:
+    dataSourceClassName: com.zaxxer.hikari.HikariDataSource
+    driverClassName: com.mysql.jdbc.Driver
+    jdbcUrl: jdbc:mysql://localhost:3306/ds_2
+    username: root
+    password: password
+  ds_3:
+    dataSourceClassName: com.zaxxer.hikari.HikariDataSource
+    driverClassName: com.mysql.jdbc.Driver
+    jdbcUrl: jdbc:mysql://localhost:3307/ds_1
+    username: root
+    password: password
+  ds_4:
+    dataSourceClassName: com.zaxxer.hikari.HikariDataSource
+    driverClassName: com.mysql.jdbc.Driver
+    jdbcUrl: jdbc:mysql://localhost:3307/ds_2
+    username: root
+    password: password
+
+rules:
+  - !FOO_XXX
+    ...
+  - !BAR_XXX
+    ...
+
+props:
+  key_1: value_1
+  key_2: value_2

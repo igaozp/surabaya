@@ -1,0 +1,40 @@
+buildscript {
+    ext {
+        shardingSphereVersion = '5.5.0'
+    }
+}
+
+plugins {
+    id 'java'
+}
+
+group = 'xyz.andornot'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+
+// https://github.com/apache/shardingsphere/issues/31128
+configurations {
+    configureEach {
+        exclude group: 'org.apache.shardingsphere', module: 'shardingsphere-test-util'
+    }
+}
+
+dependencies {
+    implementation "org.apache.shardingsphere:shardingsphere-jdbc:${shardingSphereVersion}"
+    implementation "org.apache.shardingsphere:shardingsphere-cluster-mode-repository-zookeeper:${shardingSphereVersion}"
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+//    implementation 'org.springframework.boot:spring-boot-starter'
+
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine"
+
+    testImplementation "org.junit.jupiter:junit-jupiter"
+    testImplementation "org.junit.jupiter:junit-jupiter-api"
+}
+
+test {
+    useJUnitPlatform()
+}
