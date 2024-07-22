@@ -1,6 +1,6 @@
 buildscript {
     ext {
-        h2Version = '2.2.224'
+        h2Version = '2.3.230'
     }
 }
 
