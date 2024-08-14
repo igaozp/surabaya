@@ -39,6 +39,7 @@ allprojects {
         api platform("org.springframework.boot:spring-boot-dependencies:${springbootVersion}")
 
         compileOnly "org.projectlombok:lombok:${lombokVersion}"
+        compileOnly 'org.jetbrains:annotations:24.1.0'
         annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
         testCompileOnly "org.projectlombok:lombok:${lombokVersion}"
         testAnnotationProcessor "org.projectlombok:lombok:${lombokVersion}"
