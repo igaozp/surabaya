@@ -32,6 +32,10 @@
   </p>
 </div>
 
+## Java Version
+
+Java 22 (GraalVM) https://www.graalvm.org/
+
 ## 模块列表
 
 ### lang

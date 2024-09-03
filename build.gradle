@@ -14,11 +14,11 @@ plugins {
 
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(JavaVersion.VERSION_21.toString())
+        languageVersion = JavaLanguageVersion.of(JavaVersion.VERSION_22.toString())
     }
 
-    targetCompatibility = JavaVersion.VERSION_21
-    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_22
+    sourceCompatibility = JavaVersion.VERSION_22
 }
 
 group 'xyz.andornot'
