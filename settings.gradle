@@ -16,6 +16,7 @@ include 'orm:mybatis'
 include 'orm:shardingsphere'
 
 include 'middleware:redis'
+include 'middleware:caffeine'
 
 include 'design-pattern'
 

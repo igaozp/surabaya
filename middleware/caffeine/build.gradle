@@ -1,0 +1,18 @@
+plugins {
+    id 'java'
+}
+
+group = 'xyz.andornot'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation("com.github.ben-manes.caffeine:caffeine:3.1.8")
+}
+
+test {
+    useJUnitPlatform()
+}
