@@ -1,6 +1,6 @@
 buildscript {
     ext {
-        helidonVersion = '4.1.0'
+        helidonVersion = '4.1.1'
         mainClass = 'xyz.andornot.helidon.HelidonMain'
     }
 }
