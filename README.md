@@ -34,7 +34,7 @@
 
 ## Java Version
 
-Java 22 (GraalVM) https://www.graalvm.org/
+Java 23 (GraalVM) https://www.graalvm.org/
 
 ## 模块列表
 
