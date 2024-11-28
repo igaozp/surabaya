@@ -1,6 +1,6 @@
 buildscript {
     ext {
-        shardingSphereVersion = '5.5.0'
+        shardingSphereVersion = '5.5.1'
     }
 }
 
