@@ -25,3 +25,4 @@ include 'arch:tdd'
 include 'misc:troubleshooting'
 
 include 'db:mongo'
+include 'db:elasticsearch'
