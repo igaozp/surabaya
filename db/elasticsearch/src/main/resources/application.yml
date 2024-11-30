@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: elasticsearch
+  elasticsearch:
+    uris: https://localhost:9200
+    username: elastic
+    password: onlyusefordev
+    apiKey: ZDY4UWVKTUJULVA0QXptdmRkWU46Z2J4TDIwQXpUUGF6UWdsaUhkQUxRQQ==
+    caPath: "D:/ca/ca.crt"
