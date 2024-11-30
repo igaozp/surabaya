@@ -6,4 +6,5 @@ spring:
     username: elastic
     password: onlyusefordev
     apiKey: ZDY4UWVKTUJULVA0QXptdmRkWU46Z2J4TDIwQXpUUGF6UWdsaUhkQUxRQQ==
+    # Get from docker-compose setup service
     caPath: "D:/ca/ca.crt"
