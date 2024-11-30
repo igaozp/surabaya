@@ -1,8 +1,10 @@
-package xyz.andornot;
+package xyz.andornot.config;
 
 import co.elastic.clients.elasticsearch.ElasticsearchClient;
 import co.elastic.clients.json.jackson.JacksonJsonpMapper;
 import co.elastic.clients.transport.rest_client.RestClientTransport;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.PropertyNamingStrategies;
 import org.apache.http.Header;
 import org.apache.http.HttpHost;
 import org.apache.http.message.BasicHeader;
@@ -55,8 +57,10 @@ public class EsClientConfig {
                 .setHttpClientConfigCallback(builder -> builder.setSSLContext(sslContext)).build();
 
         // Create the transport with a Jackson mapper
-        var transport = new RestClientTransport(
-                restClient, new JacksonJsonpMapper());
+        var objectMapper = new ObjectMapper();
+        objectMapper.setPropertyNamingStrategy(PropertyNamingStrategies.SNAKE_CASE);
+        var jsonpMapper = new JacksonJsonpMapper(objectMapper);
+        var transport = new RestClientTransport(restClient, jsonpMapper);
 
         return new ElasticsearchClient(transport);
     }
