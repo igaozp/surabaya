@@ -19,10 +19,10 @@
 <br />
 <div align="center">
   <a href="https://github.com/igaozp/surabaya">
-    <img src="images/logo.png" alt="Logo" width="200" height="200">
+    <img src="images/logo.png" alt="Logo">
   </a>
 
-  <h3 align="center">surabaya</h3>
+[//]: # (  <h3 align="center">surabaya</h3>)
 
   <p align="center">
     A repository of code examples around the JVM ecosystem!
