@@ -46,7 +46,7 @@ allprojects {
 
         testImplementation enforcedPlatform("org.junit:junit-bom:${junitVersion}")
 
-        testImplementation 'org.awaitility:awaitility:4.2.2'
+        testImplementation 'org.awaitility:awaitility:4.3.0'
     }
 }
 
