@@ -10,7 +10,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'co.elastic.clients:elasticsearch-java:8.17.3'
+    implementation 'co.elastic.clients:elasticsearch-java:8.17.4'
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.18.3'
     implementation 'org.springframework.data:spring-data-elasticsearch:5.4.4'
     implementation 'org.springframework.boot:spring-boot-starter'
