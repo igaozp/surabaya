@@ -8,7 +8,6 @@ public class MultipleScopedValueExample {
     private static final ScopedValue<ApplicationContext> CONTEXT = ScopedValue.newInstance();
 
     public static void main(String[] args) {
-        ScopedValue.runWhere(CONTEXT, APP_CONTEXT,
-                () -> System.out.println(STR."ApplicationContext scoped value is: \{CONTEXT.get()}"));
+        ScopedValue.where(CONTEXT, APP_CONTEXT).run(() -> System.out.println("ApplicationContext scoped value is: " + CONTEXT.get()));
     }
 }

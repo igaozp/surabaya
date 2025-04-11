@@ -32,7 +32,7 @@ public class PersonRepositoryAsyncAwait {
     }
 
     public List<Person> findAll() {
-        log.info(STR."findAll()\{Thread.currentThread()}");
+        log.info("findAll()" + Thread.currentThread());
         RowSet<Row> rows = pgPool.preparedQuery("SELECT id, name, age, gender FROM person")
                 .executeAndAwait();
         return iterateAndCreate(rows);

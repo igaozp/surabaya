@@ -51,8 +51,8 @@ public class SyncedThread {
         }
         var end = Instant.now();
         synchronized (lock) {
-            System.out.println(STR."# counter = \{counter}");
+            System.out.println("# counter = " + counter);
         }
-        System.out.println(STR."Duration = \{Duration.between(begin, end)}");
+        System.out.println("Duration = " + Duration.between(begin, end));
     }
 }

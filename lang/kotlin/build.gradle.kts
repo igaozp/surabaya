@@ -23,6 +23,11 @@ kotlin {
     jvmToolchain(23)
 }
 
+java {
+    sourceCompatibility = JavaVersion.VERSION_22
+    targetCompatibility = JavaVersion.VERSION_22
+}
+
 application {
     mainClass.set("Main")
 }

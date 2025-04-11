@@ -36,6 +36,6 @@ public record GitHubIssuePage(URI url, int issueNumber, String content, Set<Page
 
     @Override
     public String toString() {
-        return STR."GitHub issue @ \{url.toString()}";
+        return "GitHub issue @ " + url.toString();
     }
 }

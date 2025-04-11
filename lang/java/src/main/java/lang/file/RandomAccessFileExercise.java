@@ -16,8 +16,8 @@ public class RandomAccessFileExercise {
         var firstPath = Files.createTempFile("file1Test", ".txt");
         var secondPath = Files.createTempFile("file2Test", ".txt");
 
-        Files.writeString(firstPath, STR."testing line 1\{System.lineSeparator()}line 2");
-        Files.writeString(secondPath, STR."testing line 1\{System.lineSeparator()}line 2");
+        Files.writeString(firstPath, String.format("testing line 1%sline 2", System.lineSeparator()));
+        Files.writeString(secondPath, String.format("testing line 1%sline 2", System.lineSeparator()));
 
         try (var randomAccessFile1 = new RandomAccessFile(firstPath.toFile(), "r");
              var randomAccessFile2 = new RandomAccessFile(secondPath.toFile(), "r")) {

@@ -22,7 +22,7 @@ public class HelidonMain {
     public static void main(String[] args) {
         var ws = WebServer.builder().routing(HelidonMain::routing).build().start();
 
-        BlockingService.client(WebClient.builder().baseUri(STR."http://localhost:\{ws.port()}").build());
+        BlockingService.client(WebClient.builder().baseUri("http://localhost:" + ws.port()).build());
     }
 
     public static void routing(HttpRouting.Builder rules) {
@@ -42,6 +42,6 @@ public class HelidonMain {
         } catch (InterruptedException e) {
             throw new InternalServerException("Failed to sleep", e);
         }
-        res.send(STR."remote_\{counter}");
+        res.send("remote_" + counter);
     }
 }

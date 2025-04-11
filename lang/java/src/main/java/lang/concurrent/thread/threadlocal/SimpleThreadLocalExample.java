@@ -5,13 +5,13 @@ public class SimpleThreadLocalExample {
     public static final InheritableThreadLocal<String> INHERITABLE_CONTEXT = new InheritableThreadLocal<>();
 
     static void insideParentThread() {
-        System.out.println(STR."ThreadLocal Value in insideParentThread(): \{CONTEXT.get()}");
-        System.out.println(STR."InheritableThreadLocal Value in insideParentThread(): \{INHERITABLE_CONTEXT.get()}");
+        System.out.println("ThreadLocal Value in insideParentThread(): " + CONTEXT.get());
+        System.out.println("InheritableThreadLocal Value in insideParentThread(): " + INHERITABLE_CONTEXT.get());
     }
 
     static void insideChildThread() {
-        System.out.println(STR."ThreadLocal Value in insideChildThread(): \{CONTEXT.get()}");
-        System.out.println(STR."InheritableThreadLocal Value in insideChildThread(): \{INHERITABLE_CONTEXT.get()}");
+        System.out.println("ThreadLocal Value in insideChildThread(): " + CONTEXT.get());
+        System.out.println("InheritableThreadLocal Value in insideChildThread(): " + INHERITABLE_CONTEXT.get());
     }
 
     public static void main(String[] args) {

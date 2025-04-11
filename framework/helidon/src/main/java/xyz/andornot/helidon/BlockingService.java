@@ -55,7 +55,7 @@ public class BlockingService implements HttpService {
             responses.add(callRemote(client));
         }
 
-        res.send(STR."Combined results: \{responses}");
+        res.send("Combined results: " + responses);
     }
 
     private void parallel(ServerRequest req, ServerResponse res) throws ExecutionException, InterruptedException {
@@ -72,7 +72,7 @@ public class BlockingService implements HttpService {
                 responses.add(future.get());
             }
 
-            res.send(STR."Combined results: \{responses}");
+            res.send("Combined results: " + responses);
         }
     }
 

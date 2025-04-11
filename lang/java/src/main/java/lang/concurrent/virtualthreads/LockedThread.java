@@ -66,10 +66,10 @@ public class LockedThread {
         var end = Instant.now();
         lock.lock();
         try {
-            System.out.println(STR."# counter = \{counter}");
+            System.out.println("# counter = " + counter);
         } finally {
             lock.lock();
         }
-        System.out.println(STR."Duration = \{Duration.between(begin, end)}");
+        System.out.println("Duration = " + Duration.between(begin, end));
     }
 }

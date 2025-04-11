@@ -50,11 +50,11 @@ public class BulkThread {
         }
         var end = Instant.now();
 
-        System.out.println(STR."# cores = \{Runtime.getRuntime().availableProcessors()}");
-        System.out.println(STR."Time = \{Duration.between(begin, end)}");
+        System.out.println("# cores = " + Runtime.getRuntime().availableProcessors());
+        System.out.println("Time = " + Duration.between(begin, end));
         System.out.println("Pools");
         pools.forEach(System.out::println);
-        System.out.println(STR."Platform threads (\{pThreads.size()})");
+        System.out.printf("Platform threads (%s)%n", pThreads.size());
         new TreeSet<>(pThreads).forEach(System.out::println);
     }
 }
