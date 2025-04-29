@@ -11,7 +11,7 @@ repositories {
 
 dependencies {
     implementation 'co.elastic.clients:elasticsearch-java:9.0.0'
-    implementation 'com.fasterxml.jackson.core:jackson-databind:2.18.3'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.19.0'
     implementation 'org.springframework.data:spring-data-elasticsearch:5.4.4'
     implementation 'org.springframework.boot:spring-boot-starter'
 
