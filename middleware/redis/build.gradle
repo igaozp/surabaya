@@ -2,7 +2,7 @@ buildscript {
     ext {
         redisOmVersion = '0.9.11'
         jacksonVersion = '2.19.0'
-        groovyVersion = '4.0.26'
+        groovyVersion = '4.0.27'
         spockVersion = '2.4-groovy-4.0-SNAPSHOT'
     }
 }
