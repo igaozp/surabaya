@@ -1,6 +1,6 @@
 buildscript {
     ext {
-        h2Version = '2.3.232'
+        h2Version = '2.4.240'
         mybatisVersion = '3.0.5'
     }
 }
