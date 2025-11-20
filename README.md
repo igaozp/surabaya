@@ -1,13 +1,5 @@
-<div id="top"></div>
+# Surabaya
 
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
@@ -15,23 +7,17 @@
 [![MIT License][license-shield]][license-url]
 ![GitHub top lang](https://img.shields.io/github/languages/top/igaozp/surabaya?style=for-the-badge)
 
-<!-- PROJECT LOGO -->
-<br />
 <div align="center">
-  <a href="https://github.com/igaozp/surabaya">
-    <img src="images/logo.png" alt="Logo">
-  </a>
-
-[//]: # (  <h3 align="center">surabaya</h3>)
-
+  <img src="images/logo.png" alt="Surabaya Logo" width="200">
+  
   <p align="center">
-    A comprehensive repository of modern JVM ecosystem code examples and best practices!
+    <strong>A comprehensive repository of modern JVM ecosystem code examples and best practices!</strong>
     <br />
     一个全面的现代 JVM 生态系统示例代码和最佳实践库！
     <br />
+    <br />
     <a href="#getting-started"><strong>Get Started »</strong></a>
-    <br />
-    <br />
+    ·
     <a href="#module-list">View Examples</a>
     ·
     <a href="https://github.com/igaozp/surabaya/issues">Report Bug</a>
@@ -40,64 +26,90 @@
   </p>
 </div>
 
-## Table of Contents
+---
+
+## 📋 Table of Contents
 
 - [About](#about)
 - [Getting Started](#getting-started)
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Quick Start](#quick-start)
 - [Module List](#module-list)
 - [Usage Examples](#usage-examples)
 - [Contributing](#contributing)
 - [License](#license)
+- [Acknowledgments](#acknowledgments)
 
-## About
+## 📖 About
 
-Surabaya is a comprehensive collection of code examples, patterns, and best practices for the JVM ecosystem. It covers
-modern Java features, popular frameworks, design patterns, databases, middleware, and architectural patterns.
+Surabaya is a comprehensive collection of code examples, patterns, and best practices for the modern JVM ecosystem. Whether you're learning Java, exploring frameworks, or implementing design patterns, this repository provides production-ready examples with complete test coverage.
 
-### Key Features
+### ✨ Key Features
 
-- **Modern Java**: Examples using Java 23 with GraalVM, Virtual Threads, Scoped Values, and latest language features
-- **Popular Frameworks**: Spring Boot 3.5+, Quarkus, Helidon with real-world examples
-- **Design Patterns**: Complete implementation of GoF patterns with practical use cases
-- **Database Integration**: JPA, MyBatis, ShardingSphere, MongoDB, Elasticsearch examples
-- **Testing**: TDD examples with comprehensive test coverage
-- **Performance**: Connection pooling, caching, reactive programming examples
-- **DevOps Ready**: Docker Compose configurations and production-ready setups
+- **🔥 Modern Java**: Examples using Java 23 with GraalVM, Virtual Threads, Scoped Values, and latest language features
+- **🚀 Popular Frameworks**: Spring Boot 3.5+, Quarkus, Helidon with real-world examples
+- **🎨 Design Patterns**: Complete implementation of Gang of Four patterns with practical use cases
+- **💾 Database Integration**: JPA, MyBatis, ShardingSphere, MongoDB, Elasticsearch examples
+- **✅ Testing**: TDD examples with comprehensive test coverage
+- **⚡ Performance**: Connection pooling, caching, reactive programming examples
+- **🐳 DevOps Ready**: Docker Compose configurations and production-ready setups
 
-## Getting Started
+## 🚀 Getting Started
 
 ### Prerequisites
 
-- **Java 23** (GraalVM recommended) - [Download](https://www.graalvm.org/)
-- **Gradle 9.0+** (included via wrapper)
-- **Docker & Docker Compose** (for database examples)
+Before you begin, ensure you have the following installed:
+
+- **Java 23** (GraalVM recommended for best performance)
+  - [Download GraalVM](https://www.graalvm.org/)
+  - Verify: `java -version`
+- **Gradle 9.0+** (included via Gradle wrapper - no manual installation needed)
+- **Docker & Docker Compose** (required for database and middleware examples)
+  - [Install Docker](https://docs.docker.com/get-docker/)
+  - Verify: `docker --version` and `docker-compose --version`
 
 ### Installation
 
-1. Clone the repository
+1. **Clone the repository**
    ```bash
    git clone https://github.com/igaozp/surabaya.git
    cd surabaya
    ```
 
-2. Build the project
+2. **Build the project**
    ```bash
    ./gradlew build
    ```
+   
+   This will download dependencies and compile all modules. Initial build may take a few minutes.
 
-3. Run tests
+3. **Run tests to verify setup**
    ```bash
    ./gradlew test
    ```
 
-4. Start specific module (example)
-   ```bash
-   ./gradlew :framework:spring:web:bootRun
-   ```
+### Quick Start
 
-## Module List
+Here are some quick commands to get you started with different modules:
+
+```bash
+# Run a Spring Boot web application
+./gradlew :framework:spring:web:bootRun
+
+# Run Quarkus application with Virtual Threads
+./gradlew :framework:quarkus:virtual-threads:quarkusDev
+
+# Explore design patterns
+./gradlew :design-pattern:run
+
+# Run TDD examples
+./gradlew :arch:tdd:test
+```
+
+## 📦 Module List
+
+This repository is organized into focused modules, each demonstrating specific technologies or patterns.
 
 ### 🔤 Language Features (`lang`)
 
@@ -234,7 +246,7 @@ Software architecture and development practices
 - **Profiling**: Performance monitoring and optimization
 - **Debugging**: Development and production debugging strategies
 
-## Usage Examples
+## 💻 Usage Examples
 
 ### Running Specific Modules
 
@@ -252,10 +264,12 @@ Software architecture and development practices
 ./gradlew :design-pattern:run
 ```
 
-### Docker Examples
+### 🐳 Docker Examples
+
+Start required services for database and middleware examples:
 
 ```bash
-# Start Redis with Vector Search
+# Start Redis with Vector Search support
 cd middleware/redis/src/main/resources
 docker-compose up -d
 
@@ -266,9 +280,12 @@ docker-compose up -d
 # Start Elasticsearch
 cd db/elasticsearch/src/main/resources
 docker-compose up -d
+
+# Stop all services
+docker-compose down
 ```
 
-### Testing
+### 🧪 Testing
 
 ```bash
 # Run all tests
@@ -278,17 +295,22 @@ docker-compose up -d
 ./gradlew :framework:spring:test
 ./gradlew :orm:jpa:test
 
-# Run tests with coverage
+# Run tests with coverage report
 ./gradlew test jacocoTestReport
+
+# Continuous testing (watch mode)
+./gradlew test --continuous
 ```
 
-## Contributing
+## 🤝 Contributing
 
-We welcome contributions! Here's how you can help:
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 ### Development Workflow
 
 1. **Fork the repository**
+   
+   Click the "Fork" button at the top of this page, then clone your fork:
    ```bash
    git clone https://github.com/yourusername/surabaya.git
    cd surabaya
@@ -300,9 +322,10 @@ We welcome contributions! Here's how you can help:
    ```
 
 3. **Make your changes**
-    - Follow existing code style and patterns
-    - Add comprehensive tests for new features
-    - Update documentation as needed
+   - Follow existing code style and patterns
+   - Add comprehensive tests for new features
+   - Update documentation as needed
+   - Ensure your code builds without errors
 
 4. **Test your changes**
    ```bash
@@ -318,40 +341,56 @@ We welcome contributions! Here's how you can help:
    ```
 
 6. **Create a Pull Request**
+   
+   Open a pull request from your fork to the main repository with a clear description of your changes.
 
-### Coding Standards
+### 📝 Coding Standards
 
-- **Java Style**: Follow standard Java conventions
-- **Testing**: Aim for >80% test coverage
-- **Documentation**: Include JavaDoc for public APIs
-- **Commit Messages**: Use conventional commits format
-- **Dependencies**: Keep dependencies up to date
+- **Java Style**: Follow standard Java conventions and existing code patterns
+- **Testing**: Aim for >80% test coverage for new code
+- **Documentation**: Include JavaDoc for public APIs and README files for modules
+- **Commit Messages**: Use [conventional commits](https://www.conventionalcommits.org/) format
+- **Dependencies**: Keep dependencies up to date and justify new additions
 
-### Adding New Examples
+### 🆕 Adding New Examples
 
-When adding new examples:
+When contributing new examples:
 
-1. Create appropriate module structure under relevant category
-2. Include comprehensive README in module directory
-3. Add Docker Compose files for external dependencies
+1. Create appropriate module structure under the relevant category
+2. Include a comprehensive README in the module directory
+3. Add Docker Compose files for external dependencies (if needed)
 4. Write both unit and integration tests
-5. Update main README.md with new module information
+5. Update the main README.md with new module information
+6. Ensure examples follow best practices and are production-ready
 
-### Architecture Guidelines
+### 🏗️ Architecture Guidelines
 
 - **Modularity**: Keep examples focused and self-contained
 - **Dependencies**: Minimize cross-module dependencies
-- **Configuration**: Use externalized configuration (YAML/Properties)
+- **Configuration**: Use externalized configuration (YAML/Properties files)
 - **Testing**: Include both positive and negative test cases
 - **Documentation**: Provide clear setup and usage instructions
 
-<!-- LICENSE -->
+For more detailed contribution guidelines, please see our [Contributing Guide](CONTRIBUTING.md) (if available).
 
-## License
+## 📄 License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Distributed under the MIT License. See [LICENSE.txt](LICENSE.txt) for more information.
 
-<p style="text-align: right;">(<a href="#top">back to top</a>)</p>
+## 🙏 Acknowledgments
+
+- Thanks to all [contributors](https://github.com/igaozp/surabaya/graphs/contributors) who have helped improve this project
+- Inspired by best practices from the Java and JVM community
+- Built with modern tools and frameworks from the open-source ecosystem
+
+---
+
+<div align="center">
+  <p>
+    <a href="#surabaya"><strong>↑ Back to Top</strong></a>
+  </p>
+  <p>Made with ❤️ by the Surabaya community</p>
+</div>
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
@@ -365,7 +404,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 [issues-shield]: https://img.shields.io/github/issues/igaozp/surabaya.svg?style=for-the-badge
 [issues-url]: https://github.com/igaozp/surabaya/issues
 [license-shield]: https://img.shields.io/github/license/igaozp/surabaya.svg?style=for-the-badge
-[license-url]: https://github.com/igaozp/surabaya/blob/master/LICENSE.txt
+[license-url]: LICENSE.txt
 
 [github-top-lang]: https://img.shields.io/github/languages/top/igaozp/surabaya?style=for-the-badge
 
