@@ -61,8 +61,8 @@ Surabaya is a comprehensive collection of code examples, patterns, and best prac
 
 Before you begin, ensure you have the following installed:
 
-- **Java 23** (GraalVM recommended for best performance)
-  - [Download GraalVM](https://www.graalvm.org/)
+- **Java 25**
+    - [OpenJDK](https://openjdk.org/)
   - Verify: `java -version`
 - **Gradle 9.0+** (included via Gradle wrapper - no manual installation needed)
 - **Docker & Docker Compose** (required for database and middleware examples)
