@@ -15,11 +15,11 @@ public class SimpleScopedValueExample {
     }
 
 
-    public static void main(String[] args) {
+    public static void main() {
         ScopedValue.where(CONTEXT, "TestValue").run(() -> {
             insideParentThread();
 
-            try (var scope = new StructuredTaskScope<String>()) {
+            try (var scope = StructuredTaskScope.<String>open()) {
                 scope.fork(SimpleScopedValueExample::insideChildThread);
                 scope.fork(SimpleScopedValueExample::insideChildThread);
 

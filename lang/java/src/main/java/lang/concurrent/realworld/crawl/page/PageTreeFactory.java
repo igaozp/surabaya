@@ -1,6 +1,5 @@
 package lang.concurrent.realworld.crawl.page;
 
-
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -12,7 +11,6 @@ import java.util.Collections;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
-import java.util.concurrent.ExecutionException;
 import java.util.concurrent.StructuredTaskScope;
 
 import static java.util.Objects.requireNonNull;
@@ -50,16 +48,13 @@ public class PageTreeFactory {
             return Collections.emptySet();
         }
 
-        try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
+        try (var scope = StructuredTaskScope.open()) {
             var futurePages = new ArrayList<StructuredTaskScope.Subtask<Page>>();
             links.forEach(link -> futurePages.add(scope.fork(() -> createPage(link, depth))));
 
             scope.join();
-            scope.throwIfFailed();
 
             return futurePages.stream().map(StructuredTaskScope.Subtask::get).toList();
-        } catch (ExecutionException e) {
-            throw new IllegalStateException("Error cases should have seen handle during page creation!", e);
         }
     }
 
