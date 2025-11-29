@@ -47,8 +47,8 @@ Surabaya is a comprehensive collection of code examples, patterns, and best prac
 
 ### ✨ Key Features
 
-- **🔥 Modern Java**: Examples using Java 23 with GraalVM, Virtual Threads, Scoped Values, and latest language features
-- **🚀 Popular Frameworks**: Spring Boot 3.5+, Quarkus, Helidon with real-world examples
+- **🔥 Modern Java**: Examples using Java 25 with Virtual Threads, Scoped Values, Records, and latest language features
+- **🚀 Popular Frameworks**: Spring Boot 4.0.0, Quarkus, Helidon with real-world examples
 - **🎨 Design Patterns**: Complete implementation of Gang of Four patterns with practical use cases
 - **💾 Database Integration**: JPA, MyBatis, ShardingSphere, MongoDB, Elasticsearch examples
 - **✅ Testing**: TDD examples with comprehensive test coverage
@@ -62,9 +62,9 @@ Surabaya is a comprehensive collection of code examples, patterns, and best prac
 Before you begin, ensure you have the following installed:
 
 - **Java 25**
-    - [OpenJDK](https://openjdk.org/)
+  - [OpenJDK](https://openjdk.org/)
   - Verify: `java -version`
-- **Gradle 9.0+** (included via Gradle wrapper - no manual installation needed)
+- **Gradle 9.2.1** (included via Gradle wrapper - no manual installation needed)
 - **Docker & Docker Compose** (required for database and middleware examples)
   - [Install Docker](https://docs.docker.com/get-docker/)
   - Verify: `docker --version` and `docker-compose --version`
@@ -148,7 +148,7 @@ Production-ready framework examples with modern patterns
 
 #### Spring (`framework:spring`)
 
-- **Spring Boot Next** (`framework:spring:next`): Latest Spring Boot 3.5+ features
+- **Spring Boot Next** (`framework:spring:next`): Latest Spring Boot 4.0.0 features
 - **Transaction Management** (`framework:spring:transaction`): Declarative and programmatic transactions
 - **Web Development** (`framework:spring:web`): RESTful APIs and JSON streaming
 - **Reactive Programming** (`framework:spring:reactive`): WebFlux with functional routing
