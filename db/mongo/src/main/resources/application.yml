@@ -2,9 +2,8 @@ server:
   port: 8000
 
 spring:
-  data:
-    mongodb:
-      host: localhost
-      port: 27017
-      password: example
-      username: root
+  mongodb:
+    host: localhost
+    username: root
+    password: example
+    port: 27017
