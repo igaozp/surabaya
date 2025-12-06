@@ -1,7 +1,7 @@
 buildscript {
     ext {
         mockitoVersion = '5.2.0'
-        assertjVersion = '3.27.6'
+        assertjVersion = '4.0.0-M1'
     }
 }
 
@@ -19,7 +19,8 @@ repositories {
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    testImplementation "org.mockito:mockito-inline:${mockitoVersion}"
+    testImplementation 'org.springframework.boot:spring-boot-starter-webmvc-test'
+    testImplementation "org.mockito:mockito-core:${mockitoVersion}"
     testImplementation "org.assertj:assertj-core:${assertjVersion}"
 }
 
