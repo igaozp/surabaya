@@ -91,7 +91,7 @@ abstract class AbstractBlockingServiceTest {
         for (int result : results) {
             assertThat(result, not(-1));
             if (last != -1) {
-                assertThat(STR."Results should be a sequence of numbers, but the sequence is missing a number: \{Arrays.toString(results)}",
+                assertThat(String.format("Results should be a sequence of numbers, but the sequence is missing a number: %s", Arrays.toString(results)),
                         result - last, is(1));
             }
             last = result;
@@ -99,7 +99,7 @@ abstract class AbstractBlockingServiceTest {
     }
 
     private void validateUnique(int[] results) {
-        assertThat(STR."Results should be distinct: \{Arrays.toString(results)}", results.length, is((int) Arrays.stream(results).count()));
+        assertThat(String.format("Results should be distinct: %s", Arrays.toString(results)), results.length, is((int) Arrays.stream(results).count()));
     }
 
     private int[] splitAndValidateEntity(String entity) {
