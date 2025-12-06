@@ -1,17 +1,16 @@
 package xyz.andornot.student.register;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.boot.webmvc.test.autoconfigure.AutoConfigureMockMvc;
+import org.springframework.boot.webmvc.test.autoconfigure.WebMvcTest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
+import tools.jackson.databind.ObjectMapper;
 
 import static org.mockito.Mockito.doThrow;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
@@ -23,7 +22,7 @@ public class RegisterControllerTest {
     private final ObjectMapper objectMapper = new ObjectMapper();
     @Autowired
     private MockMvc mockMvc;
-    @MockBean
+    @MockitoBean
     private RegisterService service;
 
     @Test
@@ -47,11 +46,11 @@ public class RegisterControllerTest {
                 .execute(new RegisterRequest(studentId));
     }
 
-    private String bad_response(int code) throws JsonProcessingException {
+    private String bad_response(int code) {
         return objectMapper.writeValueAsString(ApiResponse.bad(code));
     }
 
-    private MockHttpServletRequestBuilder request(String url, long studentId) throws JsonProcessingException {
+    private MockHttpServletRequestBuilder request(String url, long studentId) {
         return MockMvcRequestBuilders
                 .post(url)
                 .contentType(MediaType.APPLICATION_JSON)
