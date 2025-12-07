@@ -2,12 +2,7 @@ package xyz.andornot.structural.decorators;
 
 import java.io.*;
 
-public class FileDataSource implements DataSource {
-    private final String name;
-
-    public FileDataSource(String name) {
-        this.name = name;
-    }
+public record FileDataSource(String name) implements DataSource {
 
     @Override
     public void writeData(String data) {

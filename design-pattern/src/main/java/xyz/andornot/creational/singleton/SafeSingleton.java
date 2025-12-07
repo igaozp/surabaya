@@ -1,13 +1,8 @@
 package xyz.andornot.creational.singleton;
 
-public final class SafeSingleton {
+public record SafeSingleton(String value) {
     // The field must be declared volatile so that double check lock would work correctly.
     private static volatile SafeSingleton instance;
-    public final String value;
-
-    private SafeSingleton(String value) {
-        this.value = value;
-    }
 
     public static SafeSingleton getInstance(String value) {
         // The approach taken here is called double-checked locking (DCL). It

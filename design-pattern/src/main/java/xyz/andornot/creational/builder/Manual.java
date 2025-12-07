@@ -2,22 +2,8 @@ package xyz.andornot.creational.builder;
 
 import xyz.andornot.creational.builder.feature.*;
 
-public class Manual {
-    private final CarType carType;
-    private final int seats;
-    private final Engine engine;
-    private final Transmission transmission;
-    private final TripComputer tripComputer;
-    private final GPSNavigator gpsNavigator;
-
-    public Manual(CarType carType, int seats, Engine engine, Transmission transmission, TripComputer tripComputer, GPSNavigator gpsNavigator) {
-        this.carType = carType;
-        this.seats = seats;
-        this.engine = engine;
-        this.transmission = transmission;
-        this.tripComputer = tripComputer;
-        this.gpsNavigator = gpsNavigator;
-    }
+public record Manual(CarType carType, int seats, Engine engine, Transmission transmission, TripComputer tripComputer,
+                     GPSNavigator gpsNavigator) {
 
     public String print() {
         var info = "";

@@ -2,12 +2,7 @@ package xyz.andornot.structural.proxy;
 
 import java.util.HashMap;
 
-public class YouTubeDownloader {
-    private final ThirdPartyYouTubeLib api;
-
-    public YouTubeDownloader(ThirdPartyYouTubeLib api) {
-        this.api = api;
-    }
+public record YouTubeDownloader(ThirdPartyYouTubeLib api) {
 
     public void renderVideoPage(String videoId) {
         var video = api.getVideo(videoId);

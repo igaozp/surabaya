@@ -22,7 +22,7 @@ public class DemoMultiThread {
         @Override
         public void run() {
             var singleton = Singleton.getInstance("FOO");
-            System.out.println(singleton.value);
+            System.out.println(singleton.value());
         }
     }
 
@@ -30,7 +30,7 @@ public class DemoMultiThread {
         @Override
         public void run() {
             var singleton = Singleton.getInstance("BAR");
-            System.out.println(singleton.value);
+            System.out.println(singleton.value());
         }
     }
 
@@ -38,7 +38,7 @@ public class DemoMultiThread {
         @Override
         public void run() {
             var singleton = SafeSingleton.getInstance("FOO");
-            System.out.println("safe " + singleton.value);
+            System.out.println("safe " + singleton.value());
         }
     }
 
@@ -46,7 +46,7 @@ public class DemoMultiThread {
         @Override
         public void run() {
             var singleton = SafeSingleton.getInstance("BAR");
-            System.out.println("safe " + singleton.value);
+            System.out.println("safe " + singleton.value());
         }
     }
 }
