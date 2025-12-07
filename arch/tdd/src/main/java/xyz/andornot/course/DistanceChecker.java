@@ -1,14 +1,6 @@
 package xyz.andornot.course;
 
-public class DistanceChecker {
-    private final CourseRepository courseRepository;
-    private final DistanceCalculator distanceCalculator;
-
-
-    public DistanceChecker(CourseRepository courseRepository, DistanceCalculator distanceCalculator) {
-        this.courseRepository = courseRepository;
-        this.distanceCalculator = distanceCalculator;
-    }
+public record DistanceChecker(CourseRepository courseRepository, DistanceCalculator distanceCalculator) {
 
     public boolean checkDistance(long courseId, Position position) {
         var course = courseRepository.find(courseId);
