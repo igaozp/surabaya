@@ -1,9 +1,9 @@
 package xyz.andornot.repository;
 
 import io.quarkus.runtime.StartupEvent;
-import io.vertx.mutiny.pgclient.PgPool;
 import io.vertx.mutiny.sqlclient.Row;
 import io.vertx.mutiny.sqlclient.RowSet;
+import io.vertx.mutiny.sqlclient.SqlClient;
 import io.vertx.mutiny.sqlclient.Tuple;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.enterprise.event.Observes;
@@ -19,12 +19,12 @@ import java.util.List;
 @ApplicationScoped
 public class PersonRepositoryAsyncAwait {
     @Inject
-    PgPool pgPool;
+    SqlClient sqlClient;
     @Inject
     Logger log;
 
     public Person save(Person person) {
-        var id = pgPool
+        var id = sqlClient
                 .preparedQuery(" INSERT INTO person(name, age, gender) VALUES ($1, $2, $3) RETURNING id ")
                 .executeAndAwait().iterator().next().getLong("id");
         person.setId(id);
@@ -33,26 +33,26 @@ public class PersonRepositoryAsyncAwait {
 
     public List<Person> findAll() {
         log.info("findAll()" + Thread.currentThread());
-        RowSet<Row> rows = pgPool.preparedQuery("SELECT id, name, age, gender FROM person")
+        RowSet<Row> rows = sqlClient.preparedQuery("SELECT id, name, age, gender FROM person")
                 .executeAndAwait();
         return iterateAndCreate(rows);
     }
 
     public Person findById(Long id) {
-        var rowSet = pgPool.preparedQuery("SELECT id, name, age, gender FROM person WHERE id = $1")
+        var rowSet = sqlClient.preparedQuery("SELECT id, name, age, gender FROM person WHERE id = $1")
                 .executeAndAwait(Tuple.of(id));
         var persons = iterateAndCreate(rowSet);
         return persons.isEmpty() ? null : persons.getFirst();
     }
 
     public List<Person> findByName(String name) {
-        var rowSet = pgPool.preparedQuery("SELECT id, name, age. gender FROM person WHERE id = $1")
+        var rowSet = sqlClient.preparedQuery("SELECT id, name, age. gender FROM person WHERE id = $1")
                 .executeAndAwait(Tuple.of(name));
         return iterateAndCreate(rowSet);
     }
 
     public List<Person> findByAgeGreaterThan(int age) {
-        var rowSet = pgPool.preparedQuery("SELECT id, name, age, gender FROM person WHERE age > $1")
+        var rowSet = sqlClient.preparedQuery("SELECT id, name, age, gender FROM person WHERE age > $1")
                 .executeAndAwait(Tuple.of(age));
         return iterateAndCreate(rowSet);
     }
@@ -84,8 +84,8 @@ public class PersonRepositoryAsyncAwait {
             persons.add(Tuple.of(name, age, gender, externalId));
         }
 
-        pgPool.query("DROP TABLE IF EXISTS person").execute()
-                .flatMap(_ -> pgPool.query(
+        sqlClient.query("DROP TABLE IF EXISTS person").execute()
+                .flatMap(_ -> sqlClient.query(
                         """
                                 create table person (
                                     id serial primary key,
@@ -97,7 +97,7 @@ public class PersonRepositoryAsyncAwait {
                                 """
                 ).execute())
                 .flatMap(_ ->
-                        pgPool.preparedQuery("INSERT INTO person (name, age, gender, external_id) values ($1, $2, $3, $4)")
+                        sqlClient.preparedQuery("INSERT INTO person (name, age, gender, external_id) values ($1, $2, $3, $4)")
                                 .executeBatch(persons)
                 )
                 .await().indefinitely();
