@@ -1,6 +1,6 @@
 buildscript {
     ext {
-        quarkusVersion = '3.35.1'
+        quarkusVersion = '3.35.2'
         datafakerVerson = '2.5.4'
     }
 }
